@@ -13,7 +13,6 @@ import difflib
 
 load_dotenv()
 
-# Corrected line: Pass the environment variable name as a string
 TOKEN = os.getenv("TOKEN")
 CHANNEL_ID = int(os.getenv("CHANNEL_ID")) 
 CISchanges = ""
@@ -25,7 +24,7 @@ class MyClient(discord.Client):
         pass
 
 
-async def print_hello_every_minute(channel):
+async def runLoop(channel):
     while True:
         global CISchanges
         getTimeTableChanges()
@@ -46,7 +45,7 @@ async def on_ready():
     print(f'We have logged in as {client.user}')
     channel = client.get_channel(CHANNEL_ID)
     if channel:
-        client.loop.create_task(print_hello_every_minute(channel))
+        client.loop.create_task(runLoop(channel))
     else:
         print("Channel not found. Please check the CHANNEL_ID.")
 
