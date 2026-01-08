@@ -35,7 +35,7 @@ async def runLoop(channel):
             CISchanges = ""
             embed = discord.Embed(description=Sentmessage, color=discord.Color.green())
             await channel.send(embed=embed)
-        else: 
+        else:
             print("No CIS changes found.")
         await asyncio.sleep(3600)  
 client = MyClient(intents=intents)
