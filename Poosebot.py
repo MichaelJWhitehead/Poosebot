@@ -15,7 +15,6 @@ load_dotenv()
 
 TOKEN = os.getenv("TOKEN")
 CHANNEL_ID = int(os.getenv("CHANNEL_ID")) 
-CISchanges = ""
 intents = discord.Intents.default()
 intents.message_content = True
 
@@ -26,19 +25,11 @@ class MyClient(discord.Client):
 
 async def runLoop(channel):
     while True:
-        global CISchanges
-        getTimeTableChanges()
-        with open('timetable_changes.txt', 'r') as file:
-            lines = file.readlines()
-        if CISchanges != "":   
-            Sentmessage = CISchanges
-            CISchanges = ""
-            embed = discord.Embed(description=Sentmessage, color=discord.Color.green())
-            await channel.send(embed=embed)
-        else:
-            print("No CIS changes found.")
+        print("Working")
         await asyncio.sleep(3600)  
 client = MyClient(intents=intents)
+
+postings = []
 
 @client.event
 async def on_ready():
@@ -64,7 +55,24 @@ def getScreenshotOfClass(url, id, outputfile):
         print(f"Error taking screenshot: {e}")
     finally:
         driver.quit()
-
+def scanLangleyCity():
+    response = requests.get("https://www.langleycity.ca/careers")
+    html = response.text
+    
+    soup = BeautifulSoup(html, "html.parser")
+    for row in soup.find_all("tr"):
+        cells = [td.get_text() for td in row.find_all("td")]
+        if any("IT" in cell for cell in cells):
+            postings.append(cells)
+            print(postings)
+    for row in soup.select(".view-job-postings .views-row"):
+        title = row.select_one(".views-field-title").get_text(strip=True)
+        if "IT" in title:
+            closing = row.select_one(".views-field-field-date").get_text(strip=True)
+            comp_num = row.select_one(".views-field-field-competition-number").get_text(strip=True)
+            emp_type = row.select_one(".views-field-field-employment-type").get_text(strip=True)
+            post = ([title, closing, comp_num, emp_type])
+            postings.append(post)
 Sentmessage = ""
 @client.event
 async def on_message(message):
@@ -75,5 +83,11 @@ async def on_message(message):
         print(Sentmessage)
         embed = discord.Embed(description=Sentmessage, color=discord.Color.green())
         await message.channel.send(embed=embed)
-
+    if message.content.lower().startswith('!scan'):
+        postings.clear()
+        scanLangleyCity()
+        print("\n".join(map(str, postings)))
+        Sentmessage = "\n".join(map(str, postings))
+        embed = discord.Embed(description=Sentmessage, color=discord.Color.green())
+        await message.channel.send(embed=embed)
 client.run(TOKEN)
