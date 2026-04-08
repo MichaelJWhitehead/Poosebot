@@ -14,9 +14,8 @@ import difflib
 load_dotenv()
 
 TOKEN = os.getenv("TOKEN")
-CHANNEL_ID = int(os.getenv("CHANNEL_ID"))
+CHANNEL_ID = int(os.getenv("CHANNEL_ID")) 
 CISchanges = ""
-url = os.getenv("TIMETABLE_LINK")
 intents = discord.Intents.default()
 intents.message_content = True
 
@@ -66,78 +65,15 @@ def getScreenshotOfClass(url, id, outputfile):
     finally:
         driver.quit()
 
-def getTimeTableChanges():
-    global CISchanges
-    response = requests.get(url)
-
-    if response.status_code == 200:
-        soup = BeautifulSoup(response.content, 'html.parser')
-        table = soup.find('table', id='table1')
-
-        if table:
-            rows = table.find_all('tr')
-            new_data = []
-            for row in rows:
-                columns = row.find_all(['th', 'td'])
-                row_data = [col.get_text(strip=True) for col in columns]
-                new_data.append('\t'.join(row_data))
-            with open('new_timetable_changes.txt', 'w') as new_file:
-                new_file.write('\n'.join(new_data))
-            try:
-                with open('timetable_changes.txt', 'r') as old_file:
-                    existing_data = old_file.read().splitlines()
-            except FileNotFoundError:
-                existing_data = []
-            if new_data != existing_data:
-                print("Differences detected (filtered by '- CIS '):")
-                diff = difflib.unified_diff(existing_data, new_data, lineterm='', fromfile='Existing', tofile='New')
-                CISchanges = ""
-                for line in diff:
-                    if "- CIS " in line:
-                        CISchanges += line + '\n'
-                        print(CISchanges)
-                os.remove('timetable_changes.txt')  
-                os.rename('new_timetable_changes.txt', 'timetable_changes.txt')  
-                print("Timetable changes updated in 'timetable_changes.txt'")
-            else:
-                os.remove('new_timetable_changes.txt')
-                print("No changes detected in the timetable.")
-        else:
-            print("Table with id='table1' not found on the page.")
-    else:
-        print(f"Failed to fetch the page. Status code: {response.status_code}")
-
-
 Sentmessage = ""
 @client.event
 async def on_message(message):
     if message.author == client.user:
         return
-
     if message.content.lower().startswith('!ping'):
         Sentmessage = 'pong'.format(message)
         print(Sentmessage)
         embed = discord.Embed(description=Sentmessage, color=discord.Color.green())
         await message.channel.send(embed=embed)
 
-
-    if message.content.lower().startswith('!timetable'):
-        Sentmessage = "Fetching timetable changes..."
-        print(Sentmessage)
-        embed = discord.Embed(description=Sentmessage, color=discord.Color.green())
-        await message.channel.send(embed=embed)
-        getTimeTableChanges()
-        Sentmessage = "Timetable changes have been saved to 'timetable_changes.txt'"
-        print(Sentmessage)
-        embed = discord.Embed(description=Sentmessage, color=discord.Color.green())
-        await message.channel.send(embed=embed)
-        with open('timetable_changes.txt', 'r') as file:
-            lines = file.readlines()
-        CISchanges = [line.strip() for line in lines if '- CIS ' in line]
-        Sentmessage = '\n'.join(CISchanges) if CISchanges else "No CIS changes found."
-        embed = discord.Embed(description=Sentmessage, color=discord.Color.green())
-        await message.channel.send(embed=embed)
-
-
 client.run(TOKEN)
-
