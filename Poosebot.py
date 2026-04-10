@@ -128,6 +128,8 @@ async def on_message(message):
             Sentmessage = "\n".join(map(str, postings))
         else:
             Sentmessage = "No postings found"
+        postings.remove("=== Chilliwack City ===")
+        postings.remove("=== Langley City ===")
         embed = discord.Embed(description=Sentmessage, color=discord.Color.green())
         await message.channel.send(embed=embed)
     if message.content.lower().startswith('!test'):
