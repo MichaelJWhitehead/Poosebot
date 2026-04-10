@@ -29,7 +29,8 @@ async def runLoop(channel):
         postingPrevious = postings.copy()
         postings.clear()
         scanLangleyCity()
-        diff = "".join(context_diff([str(p) for p in postingPrevious], [str(p) for p in postings]))
+        scanChilliwackCity()
+        diff = "\n".join(context_diff([str(p) for p in postingPrevious], [str(p) for p in postings]))
         print("Postings:")
         print("\n".join(map(str, postings)))
         print("Prev")
@@ -54,7 +55,7 @@ async def on_ready():
         client.loop.create_task(runLoop(channel))
     else:
         print("Channel not found. Please check the CHANNEL_ID.")
-
+''' Old function Not currently needed
 def getScreenshotOfClass(url, id, outputfile):
     options = webdriver.ChromeOptions()
     options.add_argument('--headless')
@@ -70,6 +71,7 @@ def getScreenshotOfClass(url, id, outputfile):
         print(f"Error taking screenshot: {e}")
     finally:
         driver.quit()
+'''
 def scanLangleyCity():
     response = requests.get("https://www.langleycity.ca/careers")
     html = response.text
@@ -88,6 +90,20 @@ def scanLangleyCity():
             emp_type = row.select_one(".views-field-field-employment-type").get_text(strip=True)
             post = ([title, closing, comp_num, emp_type])
             postings.append(post)
+
+
+def scanChilliwackCity():
+    response = requests.get("https://jobs.chilliwack.com/postings/")
+    html = response.text
+
+    soup = BeautifulSoup(html, "html.parser")
+    for row in soup.find_all("tr"):
+        cells = [td.get_text() for td in row.find_all("td")]
+        if any("IT" in cell for cell in cells):
+            postings.append(cells)
+            print(cells)
+
+
 Sentmessage = ""
 @client.event
 async def on_message(message):
@@ -102,6 +118,7 @@ async def on_message(message):
         postingPrevious = postings.copy()
         postings.clear()
         scanLangleyCity()
+        scanChilliwackCity()
         #print("\n".join(map(str, postings)))
         #print("\n".join(map(str, postingPrevious)))
 
@@ -115,4 +132,9 @@ async def on_message(message):
             Sentmessage = "No postings found"
         embed = discord.Embed(description=Sentmessage, color=discord.Color.green())
         await message.channel.send(embed=embed)
+    if message.content.lower().startswith('!test'):
+        Sentmessage = 'Test Complete'.format(message)
+        scanChilliwackCity()
+        print(Sentmessage)
+
 client.run(TOKEN)
