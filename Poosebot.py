@@ -9,7 +9,7 @@ import os
 from dotenv import load_dotenv
 import requests
 from bs4 import BeautifulSoup
-import difflib
+from difflib import context_diff
 
 load_dotenv()
 
@@ -26,15 +26,30 @@ class MyClient(discord.Client):
 async def runLoop(channel):
     while True:
         print("Working")
+        postingPrevious = postings.copy()
+        postings.clear()
+        scanLangleyCity()
+        diff = "".join(context_diff([str(p) for p in postingPrevious], [str(p) for p in postings]))
+        print("Postings:")
+        print("\n".join(map(str, postings)))
+        print("Prev")
+        print("\n".join(map(str, postingPrevious)))
+        print (diff)
+        if (diff != ""):
+            Sentmessage = diff
+            embed = discord.Embed(description=Sentmessage, color=discord.Color.green())
+            await channel.send(embed=embed)
         await asyncio.sleep(3600)  
 client = MyClient(intents=intents)
 
 postings = []
+postingPrevious = []
 
 @client.event
 async def on_ready():
     print(f'We have logged in as {client.user}')
     channel = client.get_channel(CHANNEL_ID)
+    print(f'Using Channel {channel}')
     if channel:
         client.loop.create_task(runLoop(channel))
     else:
@@ -64,7 +79,7 @@ def scanLangleyCity():
         cells = [td.get_text() for td in row.find_all("td")]
         if any("IT" in cell for cell in cells):
             postings.append(cells)
-            print(postings)
+            #print(postings)
     for row in soup.select(".view-job-postings .views-row"):
         title = row.select_one(".views-field-title").get_text(strip=True)
         if "IT" in title:
@@ -84,10 +99,20 @@ async def on_message(message):
         embed = discord.Embed(description=Sentmessage, color=discord.Color.green())
         await message.channel.send(embed=embed)
     if message.content.lower().startswith('!scan'):
+        postingPrevious = postings.copy()
         postings.clear()
         scanLangleyCity()
-        print("\n".join(map(str, postings)))
-        Sentmessage = "\n".join(map(str, postings))
+        #print("\n".join(map(str, postings)))
+        #print("\n".join(map(str, postingPrevious)))
+
+        diff = "".join(context_diff([str(p) for p in postingPrevious], [str(p) for p in postings]))
+        print(diff)
+        if (diff != ""):
+            Sentmessage = diff
+        elif postings:
+            Sentmessage = "\n".join(map(str, postings))
+        else:
+            Sentmessage = "No postings found"
         embed = discord.Embed(description=Sentmessage, color=discord.Color.green())
         await message.channel.send(embed=embed)
 client.run(TOKEN)
