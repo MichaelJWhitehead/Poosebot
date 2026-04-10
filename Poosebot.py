@@ -117,16 +117,14 @@ async def on_message(message):
     if message.content.lower().startswith('!scan'):
         postingPrevious = postings.copy()
         postings.clear()
+        postings.append("=== Langley City ===")
         scanLangleyCity()
+        postings.append("=== Chilliwack City ===")
         scanChilliwackCity()
-        #print("\n".join(map(str, postings)))
-        #print("\n".join(map(str, postingPrevious)))
 
-        diff = "".join(context_diff([str(p) for p in postingPrevious], [str(p) for p in postings]))
+        diff = "\n".join(context_diff([str(p) for p in postingPrevious], [str(p) for p in postings]))
         print(diff)
-        if (diff != ""):
-            Sentmessage = diff
-        elif postings:
+        if postings:
             Sentmessage = "\n".join(map(str, postings))
         else:
             Sentmessage = "No postings found"
