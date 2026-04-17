@@ -4,6 +4,8 @@ from discord.ext import commands
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.support import expected_conditions as EC
 import os
 from dotenv import load_dotenv
@@ -21,6 +23,15 @@ intents.message_content = True
 langleyTownshipLink = "https://tol.njoyn.com/CL3/xweb/Xweb.asp?tbtoken=bFhRRxMXCG91FHV5RFJTCCNKcRFEcCVbe0hZJysPE2NcWzJpWzEfchd9BQkbURNUTncqWA%3D%3D&chk=ZVpaShw%3D&CLID=56677&page=joblisting"
 
 criteria = ["IT", "Technical Support", "Information Technology", "Systems Analyst"]
+
+options = Options()
+options.add_argument("--headless")
+options.add_argument("--no-sandbox")
+options.add_argument("--disable-dev-shm-usage")
+options.binary_location = "/usr/bin/chromium-browser"
+
+service = Service("/usr/bin/chromedriver")
+
 
 class MyClient(discord.Client):
     async def setup_hook(self):
@@ -110,7 +121,7 @@ def scanChilliwackCity():
             print(cells)
 
 def scanLangleyTownship():
-    driver = webdriver.Chrome()
+    driver = webdriver.Chrome(service=service, options=options)
     driver.get(langleyTownshipLink)
 
     WebDriverWait(driver, 10).until(
