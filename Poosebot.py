@@ -18,6 +18,10 @@ CHANNEL_ID = int(os.getenv("CHANNEL_ID"))
 intents = discord.Intents.default()
 intents.message_content = True
 
+langleyTownshipLink = "https://tol.njoyn.com/CL3/xweb/Xweb.asp?tbtoken=bFhRRxMXCG91FHV5RFJTCCNKcRFEcCVbe0hZJysPE2NcWzJpWzEfchd9BQkbURNUTncqWA%3D%3D&chk=ZVpaShw%3D&CLID=56677&page=joblisting"
+
+criteria = ["IT", "Technical Support", "Information Technology", "Systems Analyst"]
+
 class MyClient(discord.Client):
     async def setup_hook(self):
         pass
@@ -79,7 +83,8 @@ def scanLangleyCity():
     soup = BeautifulSoup(html, "html.parser")
     for row in soup.find_all("tr"):
         cells = [td.get_text() for td in row.find_all("td")]
-        if any("IT" in cell for cell in cells):
+        if any(term in cell for cell in cells for term in criteria):
+        #if any("IT" in cell for cell in cells):
             postings.append(cells)
             #print(postings)
     for row in soup.select(".view-job-postings .views-row"):
@@ -99,10 +104,28 @@ def scanChilliwackCity():
     soup = BeautifulSoup(html, "html.parser")
     for row in soup.find_all("tr"):
         cells = [td.get_text() for td in row.find_all("td")]
-        if any("IT" in cell for cell in cells):
+        #if any("IT" in cell for cell in cells):
+        if any(term in cell for cell in cells for term in criteria):
             postings.append(cells)
             print(cells)
 
+def scanLangleyTownship():
+    driver = webdriver.Chrome()
+    driver.get(langleyTownshipLink)
+
+    WebDriverWait(driver, 10).until(
+        EC.presence_of_element_located((By.CLASS_NAME, "NjnSectionTable"))
+    )
+
+    html = driver.page_source
+    driver.quit()
+    soup = BeautifulSoup(html, "html.parser")
+    for row in soup.find_all("tr"):
+        cells = [td.get_text() for td in row.find_all("td")]
+        if any(term in cell for cell in cells for term in criteria):
+       # if any("IT" in cell for cell in cells):
+            postings.append(cells)
+            print(cells)
 
 Sentmessage = ""
 @client.event
@@ -134,7 +157,7 @@ async def on_message(message):
         await message.channel.send(embed=embed)
     if message.content.lower().startswith('!test'):
         Sentmessage = 'Test Complete'.format(message)
-        scanChilliwackCity()
+        scanLangleyTownship()
         print(Sentmessage)
 
 client.run(TOKEN)

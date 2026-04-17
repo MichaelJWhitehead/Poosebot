@@ -1,0 +1,3271 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head>
+   
+    <!-- Custom styles for this template -->
+    <link href="clientfiles/TOL/resources/css/Site.css" rel="stylesheet">
+    
+    <title>Township of Langley Careers | Job Opportunities</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="user-scalable=1 width=device-width, initial-scale=1.0, maximum-scale=10">
+    <link rel="shortcut icon" href="clientfiles/TOL/resources/img/favicon.ico" type="image/x-icon">
+    
+    
+  
+   
+
+    <link rel="stylesheet" href="clientfiles/TOL/resources/css/validation.css" type="text/css">
+    <script type="text/javascript" src="clientfiles/TOL/resources/js/livevalidation_standalone.js"></script>
+    <script type="text/javascript" src="clientfiles/TOL/resources/js/jquery-1.10.2.js"></script>
+ 
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+   <link href="clientfiles/TOL/resources/css/Site.css" rel="stylesheet" type="text/css">
+  <link href="clientfiles/TOL/resources/css/njoyn.css" rel="stylesheet" type="text/css">
+    <link href="clientfiles/TOL/resources/css/client.css" rel="stylesheet" type="text/css">
+    <link href="clientfiles/TOL/resources/css/responsive.css" rel="stylesheet" type="text/css">
+    <link href="clientfiles/TOL/resources/css/client-responsive.css" rel="stylesheet" type="text/css">
+
+
+	<!-- NJN_XWEB_HINT_SKIP_VALIDATION_JSCRIPT -->
+	<!-- NJN_XWEB_HINT_CLEANUP_CONTROLS -->
+
+
+<link href="clientfiles/TOL/resources/css/jquery-ui.css" rel="stylesheet" type="text/css">
+<script src="clientfiles/TOL/resources/js/1.11.4jquery-ui.js"></script>
+
+
+     
+    <meta name="robots" content="index,follow,noodp,noydir">
+    <script type="text/javaScript" src="include/util.js"></script>
+    <script type="text/javaScript">
+    <!--
+
+        var PageNavigationInProgress = 0;
+
+        function gotopage(thePage) {
+            if (PageNavigationInProgress == 1) return; 
+            PageNavigationInProgress = 1;
+            var form = document.getElementById("filterform");
+            SearchJobs(form);
+            form.pn.value = thePage;
+            form.submit();
+            return;
+        }
+
+        function sortby(theSortField) {
+            if (PageNavigationInProgress == 1) return; 
+            PageNavigationInProgress=1;
+            var form = document.getElementById("filterform");
+            SearchJobs(form);
+            form.pn.value = 1;
+            form.s.value = theSortField;
+            form.submit();
+            return;
+        }
+
+        function altrows2(pr_TableIDName, firstclass, secondclass) {
+            var oTBL = document.getElementById(pr_TableIDName);
+            if (oTBL==null) return;
+            var rows = oTBL.getElementsByTagName("tr");
+            for(var i = 1; i < rows.length; i++) {
+                if (i % 2 == 0) {
+                    rows[i].className = " " + secondclass;
+                } else {
+                    rows[i].className += " " + firstclass;
+                }
+            }
+        }
+
+
+        function SearchJobs(form) {
+            TrimAllTextFields(form);
+            if (form.Inp_Cand_Country_Filter) form.Inp_Country.value = form.Inp_Cand_Country_Filter.value;
+            form.pn.value=1;
+            return true;
+        }
+
+
+
+var aProvinces = new Array();
+
+   aProvinces[0]=new Array(2);
+   aProvinces[0][0]="AZ";
+   aProvinces[0][1]="AE";
+   aProvinces[0][2]="Abu Dhabi";
+
+   aProvinces[1]=new Array(2);
+   aProvinces[1][0]="AJ";
+   aProvinces[1][1]="AE";
+   aProvinces[1][2]="Ajman";
+
+   aProvinces[2]=new Array(2);
+   aProvinces[2][0]="DU";
+   aProvinces[2][1]="AE";
+   aProvinces[2][2]="Dubai";
+
+   aProvinces[3]=new Array(2);
+   aProvinces[3][0]="FU";
+   aProvinces[3][1]="AE";
+   aProvinces[3][2]="Fujairah";
+
+   aProvinces[4]=new Array(2);
+   aProvinces[4][0]="RK";
+   aProvinces[4][1]="AE";
+   aProvinces[4][2]="Ras al-Khaimah";
+
+   aProvinces[5]=new Array(2);
+   aProvinces[5][0]="SH";
+   aProvinces[5][1]="AE";
+   aProvinces[5][2]="Sharjah";
+
+   aProvinces[6]=new Array(2);
+   aProvinces[6][0]="UQ";
+   aProvinces[6][1]="AE";
+   aProvinces[6][2]="Umm al-Quwain";
+
+   aProvinces[7]=new Array(2);
+   aProvinces[7][0]="ACT";
+   aProvinces[7][1]="AU";
+   aProvinces[7][2]="Australian Capital Territory";
+
+   aProvinces[8]=new Array(2);
+   aProvinces[8][0]="NSW";
+   aProvinces[8][1]="AU";
+   aProvinces[8][2]="New South Wales";
+
+   aProvinces[9]=new Array(2);
+   aProvinces[9][0]="NT";
+   aProvinces[9][1]="AU";
+   aProvinces[9][2]="Northern Territory";
+
+   aProvinces[10]=new Array(2);
+   aProvinces[10][0]="QLD";
+   aProvinces[10][1]="AU";
+   aProvinces[10][2]="Queensland";
+
+   aProvinces[11]=new Array(2);
+   aProvinces[11][0]="SA";
+   aProvinces[11][1]="AU";
+   aProvinces[11][2]="South Australia";
+
+   aProvinces[12]=new Array(2);
+   aProvinces[12][0]="TAS";
+   aProvinces[12][1]="AU";
+   aProvinces[12][2]="Tasmania";
+
+   aProvinces[13]=new Array(2);
+   aProvinces[13][0]="VIC";
+   aProvinces[13][1]="AU";
+   aProvinces[13][2]="Victoria";
+
+   aProvinces[14]=new Array(2);
+   aProvinces[14][0]="WA";
+   aProvinces[14][1]="AU";
+   aProvinces[14][2]="Western Australia";
+
+   aProvinces[15]=new Array(2);
+   aProvinces[15][0]="BRU";
+   aProvinces[15][1]="BE";
+   aProvinces[15][2]="Brussels";
+
+   aProvinces[16]=new Array(2);
+   aProvinces[16][0]="BI";
+   aProvinces[16][1]="BM";
+   aProvinces[16][2]="Bermuda Island";
+
+   aProvinces[17]=new Array(2);
+   aProvinces[17][0]="AB";
+   aProvinces[17][1]="CA";
+   aProvinces[17][2]="Alberta";
+
+   aProvinces[18]=new Array(2);
+   aProvinces[18][0]="BC";
+   aProvinces[18][1]="CA";
+   aProvinces[18][2]="British Columbia";
+
+   aProvinces[19]=new Array(2);
+   aProvinces[19][0]="MB";
+   aProvinces[19][1]="CA";
+   aProvinces[19][2]="Manitoba";
+
+   aProvinces[20]=new Array(2);
+   aProvinces[20][0]="NB";
+   aProvinces[20][1]="CA";
+   aProvinces[20][2]="New Brunswick";
+
+   aProvinces[21]=new Array(2);
+   aProvinces[21][0]="NL";
+   aProvinces[21][1]="CA";
+   aProvinces[21][2]="Newfoundland and Labrador";
+
+   aProvinces[22]=new Array(2);
+   aProvinces[22][0]="NT";
+   aProvinces[22][1]="CA";
+   aProvinces[22][2]="Northwest Territories";
+
+   aProvinces[23]=new Array(2);
+   aProvinces[23][0]="NS";
+   aProvinces[23][1]="CA";
+   aProvinces[23][2]="Nova Scotia";
+
+   aProvinces[24]=new Array(2);
+   aProvinces[24][0]="NU";
+   aProvinces[24][1]="CA";
+   aProvinces[24][2]="Nunavut";
+
+   aProvinces[25]=new Array(2);
+   aProvinces[25][0]="ON";
+   aProvinces[25][1]="CA";
+   aProvinces[25][2]="Ontario";
+
+   aProvinces[26]=new Array(2);
+   aProvinces[26][0]="PE";
+   aProvinces[26][1]="CA";
+   aProvinces[26][2]="Prince Edward Island";
+
+   aProvinces[27]=new Array(2);
+   aProvinces[27][0]="QC";
+   aProvinces[27][1]="CA";
+   aProvinces[27][2]="Quebec";
+
+   aProvinces[28]=new Array(2);
+   aProvinces[28][0]="SK";
+   aProvinces[28][1]="CA";
+   aProvinces[28][2]="Saskatchewan";
+
+   aProvinces[29]=new Array(2);
+   aProvinces[29][0]="YT";
+   aProvinces[29][1]="CA";
+   aProvinces[29][2]="Yukon";
+
+   aProvinces[30]=new Array(2);
+   aProvinces[30][0]="01";
+   aProvinces[30][1]="CO";
+   aProvinces[30][2]="Amazonas";
+
+   aProvinces[31]=new Array(2);
+   aProvinces[31][0]="02";
+   aProvinces[31][1]="CO";
+   aProvinces[31][2]="Antioquia";
+
+   aProvinces[32]=new Array(2);
+   aProvinces[32][0]="03";
+   aProvinces[32][1]="CO";
+   aProvinces[32][2]="Arauca";
+
+   aProvinces[33]=new Array(2);
+   aProvinces[33][0]="04";
+   aProvinces[33][1]="CO";
+   aProvinces[33][2]="Atlántico";
+
+   aProvinces[34]=new Array(2);
+   aProvinces[34][0]="05";
+   aProvinces[34][1]="CO";
+   aProvinces[34][2]="Bolívar";
+
+   aProvinces[35]=new Array(2);
+   aProvinces[35][0]="06";
+   aProvinces[35][1]="CO";
+   aProvinces[35][2]="Boyacá";
+
+   aProvinces[36]=new Array(2);
+   aProvinces[36][0]="07";
+   aProvinces[36][1]="CO";
+   aProvinces[36][2]="Caldas";
+
+   aProvinces[37]=new Array(2);
+   aProvinces[37][0]="08";
+   aProvinces[37][1]="CO";
+   aProvinces[37][2]="Caquetá";
+
+   aProvinces[38]=new Array(2);
+   aProvinces[38][0]="09";
+   aProvinces[38][1]="CO";
+   aProvinces[38][2]="Casanare";
+
+   aProvinces[39]=new Array(2);
+   aProvinces[39][0]="10";
+   aProvinces[39][1]="CO";
+   aProvinces[39][2]="Cauca";
+
+   aProvinces[40]=new Array(2);
+   aProvinces[40][0]="11";
+   aProvinces[40][1]="CO";
+   aProvinces[40][2]="Cesar";
+
+   aProvinces[41]=new Array(2);
+   aProvinces[41][0]="12";
+   aProvinces[41][1]="CO";
+   aProvinces[41][2]="Chocó";
+
+   aProvinces[42]=new Array(2);
+   aProvinces[42][0]="13";
+   aProvinces[42][1]="CO";
+   aProvinces[42][2]="Córdoba";
+
+   aProvinces[43]=new Array(2);
+   aProvinces[43][0]="14";
+   aProvinces[43][1]="CO";
+   aProvinces[43][2]="Cundinamarca";
+
+   aProvinces[44]=new Array(2);
+   aProvinces[44][0]="15";
+   aProvinces[44][1]="CO";
+   aProvinces[44][2]="Guainía";
+
+   aProvinces[45]=new Array(2);
+   aProvinces[45][0]="16";
+   aProvinces[45][1]="CO";
+   aProvinces[45][2]="Guaviare";
+
+   aProvinces[46]=new Array(2);
+   aProvinces[46][0]="17";
+   aProvinces[46][1]="CO";
+   aProvinces[46][2]="Huila";
+
+   aProvinces[47]=new Array(2);
+   aProvinces[47][0]="18";
+   aProvinces[47][1]="CO";
+   aProvinces[47][2]="La Guajira";
+
+   aProvinces[48]=new Array(2);
+   aProvinces[48][0]="19";
+   aProvinces[48][1]="CO";
+   aProvinces[48][2]="Magdalena";
+
+   aProvinces[49]=new Array(2);
+   aProvinces[49][0]="20";
+   aProvinces[49][1]="CO";
+   aProvinces[49][2]="Meta";
+
+   aProvinces[50]=new Array(2);
+   aProvinces[50][0]="21";
+   aProvinces[50][1]="CO";
+   aProvinces[50][2]="Nariño";
+
+   aProvinces[51]=new Array(2);
+   aProvinces[51][0]="22";
+   aProvinces[51][1]="CO";
+   aProvinces[51][2]="Norte de Santander";
+
+   aProvinces[52]=new Array(2);
+   aProvinces[52][0]="23";
+   aProvinces[52][1]="CO";
+   aProvinces[52][2]="Putumayo";
+
+   aProvinces[53]=new Array(2);
+   aProvinces[53][0]="24";
+   aProvinces[53][1]="CO";
+   aProvinces[53][2]="Quindío";
+
+   aProvinces[54]=new Array(2);
+   aProvinces[54][0]="25";
+   aProvinces[54][1]="CO";
+   aProvinces[54][2]="Risaralda";
+
+   aProvinces[55]=new Array(2);
+   aProvinces[55][0]="26";
+   aProvinces[55][1]="CO";
+   aProvinces[55][2]="San Andrés y Providencia  ";
+
+   aProvinces[56]=new Array(2);
+   aProvinces[56][0]="27";
+   aProvinces[56][1]="CO";
+   aProvinces[56][2]="Santander";
+
+   aProvinces[57]=new Array(2);
+   aProvinces[57][0]="28";
+   aProvinces[57][1]="CO";
+   aProvinces[57][2]="Sucre";
+
+   aProvinces[58]=new Array(2);
+   aProvinces[58][0]="29";
+   aProvinces[58][1]="CO";
+   aProvinces[58][2]="Tolima";
+
+   aProvinces[59]=new Array(2);
+   aProvinces[59][0]="30";
+   aProvinces[59][1]="CO";
+   aProvinces[59][2]="Valle del Cauca";
+
+   aProvinces[60]=new Array(2);
+   aProvinces[60][0]="31";
+   aProvinces[60][1]="CO";
+   aProvinces[60][2]="Vaupés";
+
+   aProvinces[61]=new Array(2);
+   aProvinces[61][0]="32";
+   aProvinces[61][1]="CO";
+   aProvinces[61][2]="Vichada";
+
+   aProvinces[62]=new Array(2);
+   aProvinces[62][0]="JC";
+   aProvinces[62][1]="CZ";
+   aProvinces[62][2]="Jihoceský";
+
+   aProvinces[63]=new Array(2);
+   aProvinces[63][0]="JM";
+   aProvinces[63][1]="CZ";
+   aProvinces[63][2]="Jihomoravský";
+
+   aProvinces[64]=new Array(2);
+   aProvinces[64][0]="KA";
+   aProvinces[64][1]="CZ";
+   aProvinces[64][2]="Karlovarský";
+
+   aProvinces[65]=new Array(2);
+   aProvinces[65][0]="KR";
+   aProvinces[65][1]="CZ";
+   aProvinces[65][2]="Královéhradecký";
+
+   aProvinces[66]=new Array(2);
+   aProvinces[66][0]="LI";
+   aProvinces[66][1]="CZ";
+   aProvinces[66][2]="Liberecký";
+
+   aProvinces[67]=new Array(2);
+   aProvinces[67][0]="MO";
+   aProvinces[67][1]="CZ";
+   aProvinces[67][2]="Moravskoslezský";
+
+   aProvinces[68]=new Array(2);
+   aProvinces[68][0]="OL";
+   aProvinces[68][1]="CZ";
+   aProvinces[68][2]="Olomoucký";
+
+   aProvinces[69]=new Array(2);
+   aProvinces[69][0]="PA";
+   aProvinces[69][1]="CZ";
+   aProvinces[69][2]="Pardubický";
+
+   aProvinces[70]=new Array(2);
+   aProvinces[70][0]="PL";
+   aProvinces[70][1]="CZ";
+   aProvinces[70][2]="Plzenský";
+
+   aProvinces[71]=new Array(2);
+   aProvinces[71][0]="PR";
+   aProvinces[71][1]="CZ";
+   aProvinces[71][2]="Praha";
+
+   aProvinces[72]=new Array(2);
+   aProvinces[72][0]="ST";
+   aProvinces[72][1]="CZ";
+   aProvinces[72][2]="Stredoceský";
+
+   aProvinces[73]=new Array(2);
+   aProvinces[73][0]="US";
+   aProvinces[73][1]="CZ";
+   aProvinces[73][2]="Ústecký";
+
+   aProvinces[74]=new Array(2);
+   aProvinces[74][0]="VY";
+   aProvinces[74][1]="CZ";
+   aProvinces[74][2]="Vysocina";
+
+   aProvinces[75]=new Array(2);
+   aProvinces[75][0]="ZL";
+   aProvinces[75][1]="CZ";
+   aProvinces[75][2]="Zlínský";
+
+   aProvinces[76]=new Array(2);
+   aProvinces[76][0]="84";
+   aProvinces[76][1]="DK";
+   aProvinces[76][2]="Capital";
+
+   aProvinces[77]=new Array(2);
+   aProvinces[77][0]="82";
+   aProvinces[77][1]="DK";
+   aProvinces[77][2]="Central Jutland";
+
+   aProvinces[78]=new Array(2);
+   aProvinces[78][0]="81";
+   aProvinces[78][1]="DK";
+   aProvinces[78][2]="North Jutland";
+
+   aProvinces[79]=new Array(2);
+   aProvinces[79][0]="83";
+   aProvinces[79][1]="DK";
+   aProvinces[79][2]="South Denmark";
+
+   aProvinces[80]=new Array(2);
+   aProvinces[80][0]="85";
+   aProvinces[80][1]="DK";
+   aProvinces[80][2]="Zealand";
+
+   aProvinces[81]=new Array(2);
+   aProvinces[81][0]="BK";
+   aProvinces[81][1]="HU";
+   aProvinces[81][2]="Bács-Kiskun";
+
+   aProvinces[82]=new Array(2);
+   aProvinces[82][0]="BA";
+   aProvinces[82][1]="HU";
+   aProvinces[82][2]="Baranya";
+
+   aProvinces[83]=new Array(2);
+   aProvinces[83][0]="BE";
+   aProvinces[83][1]="HU";
+   aProvinces[83][2]="Békés";
+
+   aProvinces[84]=new Array(2);
+   aProvinces[84][0]="BC";
+   aProvinces[84][1]="HU";
+   aProvinces[84][2]="Békéscsaba";
+
+   aProvinces[85]=new Array(2);
+   aProvinces[85][0]="BZ";
+   aProvinces[85][1]="HU";
+   aProvinces[85][2]="Borsod-Abaúj-Zemplén";
+
+   aProvinces[86]=new Array(2);
+   aProvinces[86][0]="BU";
+   aProvinces[86][1]="HU";
+   aProvinces[86][2]="Budapest";
+
+   aProvinces[87]=new Array(2);
+   aProvinces[87][0]="CS";
+   aProvinces[87][1]="HU";
+   aProvinces[87][2]="Csongrád";
+
+   aProvinces[88]=new Array(2);
+   aProvinces[88][0]="DE";
+   aProvinces[88][1]="HU";
+   aProvinces[88][2]="Debrecen";
+
+   aProvinces[89]=new Array(2);
+   aProvinces[89][0]="DU";
+   aProvinces[89][1]="HU";
+   aProvinces[89][2]="Dunaújváros";
+
+   aProvinces[90]=new Array(2);
+   aProvinces[90][0]="EG";
+   aProvinces[90][1]="HU";
+   aProvinces[90][2]="Eger";
+
+   aProvinces[91]=new Array(2);
+   aProvinces[91][0]="ER";
+   aProvinces[91][1]="HU";
+   aProvinces[91][2]="Érd";
+
+   aProvinces[92]=new Array(2);
+   aProvinces[92][0]="FE";
+   aProvinces[92][1]="HU";
+   aProvinces[92][2]="Fejér";
+
+   aProvinces[93]=new Array(2);
+   aProvinces[93][0]="GY";
+   aProvinces[93][1]="HU";
+   aProvinces[93][2]="Gyor";
+
+   aProvinces[94]=new Array(2);
+   aProvinces[94][0]="GS";
+   aProvinces[94][1]="HU";
+   aProvinces[94][2]="Gyor-Moson-Sopron";
+
+   aProvinces[95]=new Array(2);
+   aProvinces[95][0]="HB";
+   aProvinces[95][1]="HU";
+   aProvinces[95][2]="Hajdú-Bihar";
+
+   aProvinces[96]=new Array(2);
+   aProvinces[96][0]="HE";
+   aProvinces[96][1]="HU";
+   aProvinces[96][2]="Heves";
+
+   aProvinces[97]=new Array(2);
+   aProvinces[97][0]="HV";
+   aProvinces[97][1]="HU";
+   aProvinces[97][2]="Hódmezovásárhely";
+
+   aProvinces[98]=new Array(2);
+   aProvinces[98][0]="JN";
+   aProvinces[98][1]="HU";
+   aProvinces[98][2]="Jász-Nagykun-Szolnok";
+
+   aProvinces[99]=new Array(2);
+   aProvinces[99][0]="KV";
+   aProvinces[99][1]="HU";
+   aProvinces[99][2]="Kaposvár";
+
+   aProvinces[100]=new Array(2);
+   aProvinces[100][0]="KM";
+   aProvinces[100][1]="HU";
+   aProvinces[100][2]="Kecskemét";
+
+   aProvinces[101]=new Array(2);
+   aProvinces[101][0]="KE";
+   aProvinces[101][1]="HU";
+   aProvinces[101][2]="Komárom-Esztergom";
+
+   aProvinces[102]=new Array(2);
+   aProvinces[102][0]="MI";
+   aProvinces[102][1]="HU";
+   aProvinces[102][2]="Miskolc";
+
+   aProvinces[103]=new Array(2);
+   aProvinces[103][0]="NK";
+   aProvinces[103][1]="HU";
+   aProvinces[103][2]="Nagykanizsa";
+
+   aProvinces[104]=new Array(2);
+   aProvinces[104][0]="NO";
+   aProvinces[104][1]="HU";
+   aProvinces[104][2]="Nógrád";
+
+   aProvinces[105]=new Array(2);
+   aProvinces[105][0]="NY";
+   aProvinces[105][1]="HU";
+   aProvinces[105][2]="Nyíregyháza";
+
+   aProvinces[106]=new Array(2);
+   aProvinces[106][0]="PS";
+   aProvinces[106][1]="HU";
+   aProvinces[106][2]="Pécs";
+
+   aProvinces[107]=new Array(2);
+   aProvinces[107][0]="PE";
+   aProvinces[107][1]="HU";
+   aProvinces[107][2]="Pest";
+
+   aProvinces[108]=new Array(2);
+   aProvinces[108][0]="ST";
+   aProvinces[108][1]="HU";
+   aProvinces[108][2]="Salgótarján";
+
+   aProvinces[109]=new Array(2);
+   aProvinces[109][0]="SO";
+   aProvinces[109][1]="HU";
+   aProvinces[109][2]="Somogy";
+
+   aProvinces[110]=new Array(2);
+   aProvinces[110][0]="SN";
+   aProvinces[110][1]="HU";
+   aProvinces[110][2]="Sopron";
+
+   aProvinces[111]=new Array(2);
+   aProvinces[111][0]="SZ";
+   aProvinces[111][1]="HU";
+   aProvinces[111][2]="Szabolcs-Szatmár-Bereg";
+
+   aProvinces[112]=new Array(2);
+   aProvinces[112][0]="SD";
+   aProvinces[112][1]="HU";
+   aProvinces[112][2]="Szeged";
+
+   aProvinces[113]=new Array(2);
+   aProvinces[113][0]="SF";
+   aProvinces[113][1]="HU";
+   aProvinces[113][2]="Székesfehérvár";
+
+   aProvinces[114]=new Array(2);
+   aProvinces[114][0]="SS";
+   aProvinces[114][1]="HU";
+   aProvinces[114][2]="Szekszárd";
+
+   aProvinces[115]=new Array(2);
+   aProvinces[115][0]="SK";
+   aProvinces[115][1]="HU";
+   aProvinces[115][2]="Szolnok";
+
+   aProvinces[116]=new Array(2);
+   aProvinces[116][0]="SH";
+   aProvinces[116][1]="HU";
+   aProvinces[116][2]="Szombathely";
+
+   aProvinces[117]=new Array(2);
+   aProvinces[117][0]="TB";
+   aProvinces[117][1]="HU";
+   aProvinces[117][2]="Tatabánya";
+
+   aProvinces[118]=new Array(2);
+   aProvinces[118][0]="TO";
+   aProvinces[118][1]="HU";
+   aProvinces[118][2]="Tolna";
+
+   aProvinces[119]=new Array(2);
+   aProvinces[119][0]="VA";
+   aProvinces[119][1]="HU";
+   aProvinces[119][2]="Vas";
+
+   aProvinces[120]=new Array(2);
+   aProvinces[120][0]="VE";
+   aProvinces[120][1]="HU";
+   aProvinces[120][2]="Veszprém";
+
+   aProvinces[121]=new Array(2);
+   aProvinces[121][0]="VM";
+   aProvinces[121][1]="HU";
+   aProvinces[121][2]="Veszprém";
+
+   aProvinces[122]=new Array(2);
+   aProvinces[122][0]="ZA";
+   aProvinces[122][1]="HU";
+   aProvinces[122][2]="Zala";
+
+   aProvinces[123]=new Array(2);
+   aProvinces[123][0]="ZE";
+   aProvinces[123][1]="HU";
+   aProvinces[123][2]="Zalaegerszeg";
+
+   aProvinces[124]=new Array(2);
+   aProvinces[124][0]="C0";
+   aProvinces[124][1]="IE";
+   aProvinces[124][2]="Connacht";
+
+   aProvinces[125]=new Array(2);
+   aProvinces[125][0]="LE";
+   aProvinces[125][1]="IE";
+   aProvinces[125][2]="Leinster";
+
+   aProvinces[126]=new Array(2);
+   aProvinces[126][0]="MU";
+   aProvinces[126][1]="IE";
+   aProvinces[126][2]="Munster";
+
+   aProvinces[127]=new Array(2);
+   aProvinces[127][0]="UL";
+   aProvinces[127][1]="IE";
+   aProvinces[127][2]="Ulster";
+
+   aProvinces[128]=new Array(2);
+   aProvinces[128][0]="AN";
+   aProvinces[128][1]="IN";
+   aProvinces[128][2]="Andaman and Nicobar Islands";
+
+   aProvinces[129]=new Array(2);
+   aProvinces[129][0]="AP";
+   aProvinces[129][1]="IN";
+   aProvinces[129][2]="Andhra Pradesh";
+
+   aProvinces[130]=new Array(2);
+   aProvinces[130][0]="AR";
+   aProvinces[130][1]="IN";
+   aProvinces[130][2]="Arunachal Pradesh";
+
+   aProvinces[131]=new Array(2);
+   aProvinces[131][0]="AS";
+   aProvinces[131][1]="IN";
+   aProvinces[131][2]="Assam";
+
+   aProvinces[132]=new Array(2);
+   aProvinces[132][0]="BR";
+   aProvinces[132][1]="IN";
+   aProvinces[132][2]="Bihar";
+
+   aProvinces[133]=new Array(2);
+   aProvinces[133][0]="CH";
+   aProvinces[133][1]="IN";
+   aProvinces[133][2]="Chandigarh";
+
+   aProvinces[134]=new Array(2);
+   aProvinces[134][0]="CT";
+   aProvinces[134][1]="IN";
+   aProvinces[134][2]="Chhattisgarh";
+
+   aProvinces[135]=new Array(2);
+   aProvinces[135][0]="DN";
+   aProvinces[135][1]="IN";
+   aProvinces[135][2]="Dadra and Nagar Haveli";
+
+   aProvinces[136]=new Array(2);
+   aProvinces[136][0]="DD";
+   aProvinces[136][1]="IN";
+   aProvinces[136][2]="Daman and Diu";
+
+   aProvinces[137]=new Array(2);
+   aProvinces[137][0]="DL";
+   aProvinces[137][1]="IN";
+   aProvinces[137][2]="Delhi";
+
+   aProvinces[138]=new Array(2);
+   aProvinces[138][0]="GA";
+   aProvinces[138][1]="IN";
+   aProvinces[138][2]="Goa";
+
+   aProvinces[139]=new Array(2);
+   aProvinces[139][0]="GJ";
+   aProvinces[139][1]="IN";
+   aProvinces[139][2]="Gujarat";
+
+   aProvinces[140]=new Array(2);
+   aProvinces[140][0]="HR";
+   aProvinces[140][1]="IN";
+   aProvinces[140][2]="Haryana";
+
+   aProvinces[141]=new Array(2);
+   aProvinces[141][0]="HP";
+   aProvinces[141][1]="IN";
+   aProvinces[141][2]="Himachal Pradesh";
+
+   aProvinces[142]=new Array(2);
+   aProvinces[142][0]="JK";
+   aProvinces[142][1]="IN";
+   aProvinces[142][2]="Jammu and Kashmir";
+
+   aProvinces[143]=new Array(2);
+   aProvinces[143][0]="JH";
+   aProvinces[143][1]="IN";
+   aProvinces[143][2]="Jharkhand";
+
+   aProvinces[144]=new Array(2);
+   aProvinces[144][0]="KA";
+   aProvinces[144][1]="IN";
+   aProvinces[144][2]="Karnataka";
+
+   aProvinces[145]=new Array(2);
+   aProvinces[145][0]="KL";
+   aProvinces[145][1]="IN";
+   aProvinces[145][2]="Kerala";
+
+   aProvinces[146]=new Array(2);
+   aProvinces[146][0]="LD";
+   aProvinces[146][1]="IN";
+   aProvinces[146][2]="Lakshadweep";
+
+   aProvinces[147]=new Array(2);
+   aProvinces[147][0]="MP";
+   aProvinces[147][1]="IN";
+   aProvinces[147][2]="Madhya Pradesh";
+
+   aProvinces[148]=new Array(2);
+   aProvinces[148][0]="MH";
+   aProvinces[148][1]="IN";
+   aProvinces[148][2]="Maharashtra";
+
+   aProvinces[149]=new Array(2);
+   aProvinces[149][0]="MN";
+   aProvinces[149][1]="IN";
+   aProvinces[149][2]="Manipur";
+
+   aProvinces[150]=new Array(2);
+   aProvinces[150][0]="ML";
+   aProvinces[150][1]="IN";
+   aProvinces[150][2]="Meghalaya";
+
+   aProvinces[151]=new Array(2);
+   aProvinces[151][0]="MZ";
+   aProvinces[151][1]="IN";
+   aProvinces[151][2]="Mizoram";
+
+   aProvinces[152]=new Array(2);
+   aProvinces[152][0]="NL";
+   aProvinces[152][1]="IN";
+   aProvinces[152][2]="Nagaland";
+
+   aProvinces[153]=new Array(2);
+   aProvinces[153][0]="OR";
+   aProvinces[153][1]="IN";
+   aProvinces[153][2]="Orissa";
+
+   aProvinces[154]=new Array(2);
+   aProvinces[154][0]="PY";
+   aProvinces[154][1]="IN";
+   aProvinces[154][2]="Pondicherry";
+
+   aProvinces[155]=new Array(2);
+   aProvinces[155][0]="PB";
+   aProvinces[155][1]="IN";
+   aProvinces[155][2]="Punjab";
+
+   aProvinces[156]=new Array(2);
+   aProvinces[156][0]="RJ";
+   aProvinces[156][1]="IN";
+   aProvinces[156][2]="Rajasthan";
+
+   aProvinces[157]=new Array(2);
+   aProvinces[157][0]="SK";
+   aProvinces[157][1]="IN";
+   aProvinces[157][2]="Sikkim";
+
+   aProvinces[158]=new Array(2);
+   aProvinces[158][0]="TN";
+   aProvinces[158][1]="IN";
+   aProvinces[158][2]="Tamil Nadu";
+
+   aProvinces[159]=new Array(2);
+   aProvinces[159][0]="TR";
+   aProvinces[159][1]="IN";
+   aProvinces[159][2]="Tripura";
+
+   aProvinces[160]=new Array(2);
+   aProvinces[160][0]="UP";
+   aProvinces[160][1]="IN";
+   aProvinces[160][2]="Uttar Pradesh";
+
+   aProvinces[161]=new Array(2);
+   aProvinces[161][0]="UL";
+   aProvinces[161][1]="IN";
+   aProvinces[161][2]="Uttarakhand";
+
+   aProvinces[162]=new Array(2);
+   aProvinces[162][0]="WB";
+   aProvinces[162][1]="IN";
+   aProvinces[162][2]="West Bengal";
+
+   aProvinces[163]=new Array(2);
+   aProvinces[163][0]="02";
+   aProvinces[163][1]="NO";
+   aProvinces[163][2]="Akershus";
+
+   aProvinces[164]=new Array(2);
+   aProvinces[164][0]="09";
+   aProvinces[164][1]="NO";
+   aProvinces[164][2]="Aust-Agder";
+
+   aProvinces[165]=new Array(2);
+   aProvinces[165][0]="06";
+   aProvinces[165][1]="NO";
+   aProvinces[165][2]="Buskerud";
+
+   aProvinces[166]=new Array(2);
+   aProvinces[166][0]="20";
+   aProvinces[166][1]="NO";
+   aProvinces[166][2]="Finnmark";
+
+   aProvinces[167]=new Array(2);
+   aProvinces[167][0]="04";
+   aProvinces[167][1]="NO";
+   aProvinces[167][2]="Hedmark";
+
+   aProvinces[168]=new Array(2);
+   aProvinces[168][0]="12";
+   aProvinces[168][1]="NO";
+   aProvinces[168][2]="Hordaland";
+
+   aProvinces[169]=new Array(2);
+   aProvinces[169][0]="15";
+   aProvinces[169][1]="NO";
+   aProvinces[169][2]="Møre og Romsdal";
+
+   aProvinces[170]=new Array(2);
+   aProvinces[170][0]="17";
+   aProvinces[170][1]="NO";
+   aProvinces[170][2]="Nord-Trøndelag";
+
+   aProvinces[171]=new Array(2);
+   aProvinces[171][0]="18";
+   aProvinces[171][1]="NO";
+   aProvinces[171][2]="Nordland";
+
+   aProvinces[172]=new Array(2);
+   aProvinces[172][0]="05";
+   aProvinces[172][1]="NO";
+   aProvinces[172][2]="Oppland";
+
+   aProvinces[173]=new Array(2);
+   aProvinces[173][0]="03";
+   aProvinces[173][1]="NO";
+   aProvinces[173][2]="Oslo";
+
+   aProvinces[174]=new Array(2);
+   aProvinces[174][0]="01";
+   aProvinces[174][1]="NO";
+   aProvinces[174][2]="Østfold";
+
+   aProvinces[175]=new Array(2);
+   aProvinces[175][0]="11";
+   aProvinces[175][1]="NO";
+   aProvinces[175][2]="Rogaland";
+
+   aProvinces[176]=new Array(2);
+   aProvinces[176][0]="14";
+   aProvinces[176][1]="NO";
+   aProvinces[176][2]="Sogn og Fjordane";
+
+   aProvinces[177]=new Array(2);
+   aProvinces[177][0]="16";
+   aProvinces[177][1]="NO";
+   aProvinces[177][2]="Sør-Trøndelag";
+
+   aProvinces[178]=new Array(2);
+   aProvinces[178][0]="08";
+   aProvinces[178][1]="NO";
+   aProvinces[178][2]="Telemark";
+
+   aProvinces[179]=new Array(2);
+   aProvinces[179][0]="19";
+   aProvinces[179][1]="NO";
+   aProvinces[179][2]="Troms";
+
+   aProvinces[180]=new Array(2);
+   aProvinces[180][0]="10";
+   aProvinces[180][1]="NO";
+   aProvinces[180][2]="Vest-Agder";
+
+   aProvinces[181]=new Array(2);
+   aProvinces[181][0]="07";
+   aProvinces[181][1]="NO";
+   aProvinces[181][2]="Vestfold";
+
+   aProvinces[182]=new Array(2);
+   aProvinces[182][0]="OT";
+   aProvinces[182][1]="OT";
+   aProvinces[182][2]="Other";
+
+   aProvinces[183]=new Array(2);
+   aProvinces[183][0]="AMA";
+   aProvinces[183][1]="PE";
+   aProvinces[183][2]="Amazonas";
+
+   aProvinces[184]=new Array(2);
+   aProvinces[184][0]="ANC";
+   aProvinces[184][1]="PE";
+   aProvinces[184][2]="Ancash";
+
+   aProvinces[185]=new Array(2);
+   aProvinces[185][0]="APU";
+   aProvinces[185][1]="PE";
+   aProvinces[185][2]="Apurímac";
+
+   aProvinces[186]=new Array(2);
+   aProvinces[186][0]="ARE";
+   aProvinces[186][1]="PE";
+   aProvinces[186][2]="Arequipa";
+
+   aProvinces[187]=new Array(2);
+   aProvinces[187][0]="AYA";
+   aProvinces[187][1]="PE";
+   aProvinces[187][2]="Ayacucho";
+
+   aProvinces[188]=new Array(2);
+   aProvinces[188][0]="CAJ";
+   aProvinces[188][1]="PE";
+   aProvinces[188][2]="Cajamarca";
+
+   aProvinces[189]=new Array(2);
+   aProvinces[189][0]="CAL";
+   aProvinces[189][1]="PE";
+   aProvinces[189][2]="Callao";
+
+   aProvinces[190]=new Array(2);
+   aProvinces[190][0]="CUS";
+   aProvinces[190][1]="PE";
+   aProvinces[190][2]="Cusco";
+
+   aProvinces[191]=new Array(2);
+   aProvinces[191][0]="HUV";
+   aProvinces[191][1]="PE";
+   aProvinces[191][2]="Huancavelica";
+
+   aProvinces[192]=new Array(2);
+   aProvinces[192][0]="HUC";
+   aProvinces[192][1]="PE";
+   aProvinces[192][2]="Huánuco";
+
+   aProvinces[193]=new Array(2);
+   aProvinces[193][0]="ICA";
+   aProvinces[193][1]="PE";
+   aProvinces[193][2]="Ica";
+
+   aProvinces[194]=new Array(2);
+   aProvinces[194][0]="JUN";
+   aProvinces[194][1]="PE";
+   aProvinces[194][2]="Junín";
+
+   aProvinces[195]=new Array(2);
+   aProvinces[195][0]="LAL";
+   aProvinces[195][1]="PE";
+   aProvinces[195][2]="La Libertad";
+
+   aProvinces[196]=new Array(2);
+   aProvinces[196][0]="LAM";
+   aProvinces[196][1]="PE";
+   aProvinces[196][2]="Lambayeque";
+
+   aProvinces[197]=new Array(2);
+   aProvinces[197][0]="LIM";
+   aProvinces[197][1]="PE";
+   aProvinces[197][2]="Lima";
+
+   aProvinces[198]=new Array(2);
+   aProvinces[198][0]="LMA";
+   aProvinces[198][1]="PE";
+   aProvinces[198][2]="Lima [Province]";
+
+   aProvinces[199]=new Array(2);
+   aProvinces[199][0]="LOR";
+   aProvinces[199][1]="PE";
+   aProvinces[199][2]="Loreto";
+
+   aProvinces[200]=new Array(2);
+   aProvinces[200][0]="MDD";
+   aProvinces[200][1]="PE";
+   aProvinces[200][2]="Madre de Dios";
+
+   aProvinces[201]=new Array(2);
+   aProvinces[201][0]="MOQ";
+   aProvinces[201][1]="PE";
+   aProvinces[201][2]="Moquegua";
+
+   aProvinces[202]=new Array(2);
+   aProvinces[202][0]="PAS";
+   aProvinces[202][1]="PE";
+   aProvinces[202][2]="Pasco";
+
+   aProvinces[203]=new Array(2);
+   aProvinces[203][0]="PIU";
+   aProvinces[203][1]="PE";
+   aProvinces[203][2]="Piura";
+
+   aProvinces[204]=new Array(2);
+   aProvinces[204][0]="PUN";
+   aProvinces[204][1]="PE";
+   aProvinces[204][2]="Puno";
+
+   aProvinces[205]=new Array(2);
+   aProvinces[205][0]="SAM";
+   aProvinces[205][1]="PE";
+   aProvinces[205][2]="San Martín";
+
+   aProvinces[206]=new Array(2);
+   aProvinces[206][0]="TAC";
+   aProvinces[206][1]="PE";
+   aProvinces[206][2]="Tacna";
+
+   aProvinces[207]=new Array(2);
+   aProvinces[207][0]="TUM";
+   aProvinces[207][1]="PE";
+   aProvinces[207][2]="Tumbes";
+
+   aProvinces[208]=new Array(2);
+   aProvinces[208][0]="UCA";
+   aProvinces[208][1]="PE";
+   aProvinces[208][2]="Ucayali";
+
+   aProvinces[209]=new Array(2);
+   aProvinces[209][0]="DS";
+   aProvinces[209][1]="PL";
+   aProvinces[209][2]="Dolnoslaskie";
+
+   aProvinces[210]=new Array(2);
+   aProvinces[210][0]="KP";
+   aProvinces[210][1]="PL";
+   aProvinces[210][2]="Kujawsko-Pomorskie";
+
+   aProvinces[211]=new Array(2);
+   aProvinces[211][0]="LD";
+   aProvinces[211][1]="PL";
+   aProvinces[211][2]="Lódzkie";
+
+   aProvinces[212]=new Array(2);
+   aProvinces[212][0]="LU";
+   aProvinces[212][1]="PL";
+   aProvinces[212][2]="Lubelskie";
+
+   aProvinces[213]=new Array(2);
+   aProvinces[213][0]="LB";
+   aProvinces[213][1]="PL";
+   aProvinces[213][2]="Lubuskie";
+
+   aProvinces[214]=new Array(2);
+   aProvinces[214][0]="MP";
+   aProvinces[214][1]="PL";
+   aProvinces[214][2]="Malopolskie";
+
+   aProvinces[215]=new Array(2);
+   aProvinces[215][0]="MZ";
+   aProvinces[215][1]="PL";
+   aProvinces[215][2]="Mazowieckie";
+
+   aProvinces[216]=new Array(2);
+   aProvinces[216][0]="OP";
+   aProvinces[216][1]="PL";
+   aProvinces[216][2]="Opolskie";
+
+   aProvinces[217]=new Array(2);
+   aProvinces[217][0]="PK";
+   aProvinces[217][1]="PL";
+   aProvinces[217][2]="Podkarpackie ";
+
+   aProvinces[218]=new Array(2);
+   aProvinces[218][0]="PD";
+   aProvinces[218][1]="PL";
+   aProvinces[218][2]="Podlaskie";
+
+   aProvinces[219]=new Array(2);
+   aProvinces[219][0]="PM";
+   aProvinces[219][1]="PL";
+   aProvinces[219][2]="Pomorskie";
+
+   aProvinces[220]=new Array(2);
+   aProvinces[220][0]="SL";
+   aProvinces[220][1]="PL";
+   aProvinces[220][2]="Slaskie";
+
+   aProvinces[221]=new Array(2);
+   aProvinces[221][0]="SW";
+   aProvinces[221][1]="PL";
+   aProvinces[221][2]="Swietokrzyskie";
+
+   aProvinces[222]=new Array(2);
+   aProvinces[222][0]="WM";
+   aProvinces[222][1]="PL";
+   aProvinces[222][2]="Warminsko-Mazurskie";
+
+   aProvinces[223]=new Array(2);
+   aProvinces[223][0]="WP";
+   aProvinces[223][1]="PL";
+   aProvinces[223][2]="Wielkopolskie";
+
+   aProvinces[224]=new Array(2);
+   aProvinces[224][0]="ZP";
+   aProvinces[224][1]="PL";
+   aProvinces[224][2]="Zachodnio-Pomorskie";
+
+   aProvinces[225]=new Array(2);
+   aProvinces[225][0]="AD";
+   aProvinces[225][1]="RU";
+   aProvinces[225][2]="Adygey";
+
+   aProvinces[226]=new Array(2);
+   aProvinces[226][0]="ALT";
+   aProvinces[226][1]="RU";
+   aProvinces[226][2]="Altay";
+
+   aProvinces[227]=new Array(2);
+   aProvinces[227][0]="AMU";
+   aProvinces[227][1]="RU";
+   aProvinces[227][2]="Amur";
+
+   aProvinces[228]=new Array(2);
+   aProvinces[228][0]="ARK";
+   aProvinces[228][1]="RU";
+   aProvinces[228][2]="Arkhangel'sk";
+
+   aProvinces[229]=new Array(2);
+   aProvinces[229][0]="AST";
+   aProvinces[229][1]="RU";
+   aProvinces[229][2]="Astrakhan'";
+
+   aProvinces[230]=new Array(2);
+   aProvinces[230][0]="BA";
+   aProvinces[230][1]="RU";
+   aProvinces[230][2]="Bashkortostan";
+
+   aProvinces[231]=new Array(2);
+   aProvinces[231][0]="BEL";
+   aProvinces[231][1]="RU";
+   aProvinces[231][2]="Belgorod";
+
+   aProvinces[232]=new Array(2);
+   aProvinces[232][0]="BRY";
+   aProvinces[232][1]="RU";
+   aProvinces[232][2]="Bryansk";
+
+   aProvinces[233]=new Array(2);
+   aProvinces[233][0]="BU";
+   aProvinces[233][1]="RU";
+   aProvinces[233][2]="Buryat";
+
+   aProvinces[234]=new Array(2);
+   aProvinces[234][0]="CE";
+   aProvinces[234][1]="RU";
+   aProvinces[234][2]="Chechnya";
+
+   aProvinces[235]=new Array(2);
+   aProvinces[235][0]="CHE";
+   aProvinces[235][1]="RU";
+   aProvinces[235][2]="Chelyabinsk";
+
+   aProvinces[236]=new Array(2);
+   aProvinces[236][0]="CHU";
+   aProvinces[236][1]="RU";
+   aProvinces[236][2]="Chukot";
+
+   aProvinces[237]=new Array(2);
+   aProvinces[237][0]="CU";
+   aProvinces[237][1]="RU";
+   aProvinces[237][2]="Chuvash";
+
+   aProvinces[238]=new Array(2);
+   aProvinces[238][0]="DA";
+   aProvinces[238][1]="RU";
+   aProvinces[238][2]="Dagestan";
+
+   aProvinces[239]=new Array(2);
+   aProvinces[239][0]="AL";
+   aProvinces[239][1]="RU";
+   aProvinces[239][2]="Gorno-Altay";
+
+   aProvinces[240]=new Array(2);
+   aProvinces[240][0]="IN";
+   aProvinces[240][1]="RU";
+   aProvinces[240][2]="Ingush";
+
+   aProvinces[241]=new Array(2);
+   aProvinces[241][0]="IRK";
+   aProvinces[241][1]="RU";
+   aProvinces[241][2]="Irkutsk";
+
+   aProvinces[242]=new Array(2);
+   aProvinces[242][0]="IVA";
+   aProvinces[242][1]="RU";
+   aProvinces[242][2]="Ivanovo";
+
+   aProvinces[243]=new Array(2);
+   aProvinces[243][0]="KB";
+   aProvinces[243][1]="RU";
+   aProvinces[243][2]="Kabardin-Balkar";
+
+   aProvinces[244]=new Array(2);
+   aProvinces[244][0]="KGD";
+   aProvinces[244][1]="RU";
+   aProvinces[244][2]="Kaliningrad";
+
+   aProvinces[245]=new Array(2);
+   aProvinces[245][0]="KL";
+   aProvinces[245][1]="RU";
+   aProvinces[245][2]="Kalmyk";
+
+   aProvinces[246]=new Array(2);
+   aProvinces[246][0]="KLU";
+   aProvinces[246][1]="RU";
+   aProvinces[246][2]="Kaluga";
+
+   aProvinces[247]=new Array(2);
+   aProvinces[247][0]="KAM";
+   aProvinces[247][1]="RU";
+   aProvinces[247][2]="Kamchatka";
+
+   aProvinces[248]=new Array(2);
+   aProvinces[248][0]="KC";
+   aProvinces[248][1]="RU";
+   aProvinces[248][2]="Karachay-Cherkess";
+
+   aProvinces[249]=new Array(2);
+   aProvinces[249][0]="KR";
+   aProvinces[249][1]="RU";
+   aProvinces[249][2]="Karelia";
+
+   aProvinces[250]=new Array(2);
+   aProvinces[250][0]="KEM";
+   aProvinces[250][1]="RU";
+   aProvinces[250][2]="Kemerovo";
+
+   aProvinces[251]=new Array(2);
+   aProvinces[251][0]="KHA";
+   aProvinces[251][1]="RU";
+   aProvinces[251][2]="Khabarovsk";
+
+   aProvinces[252]=new Array(2);
+   aProvinces[252][0]="KK";
+   aProvinces[252][1]="RU";
+   aProvinces[252][2]="Khakass";
+
+   aProvinces[253]=new Array(2);
+   aProvinces[253][0]="KHM";
+   aProvinces[253][1]="RU";
+   aProvinces[253][2]="Khanty-Mansiy";
+
+   aProvinces[254]=new Array(2);
+   aProvinces[254][0]="KIR";
+   aProvinces[254][1]="RU";
+   aProvinces[254][2]="Kirov";
+
+   aProvinces[255]=new Array(2);
+   aProvinces[255][0]="KO";
+   aProvinces[255][1]="RU";
+   aProvinces[255][2]="Komi";
+
+   aProvinces[256]=new Array(2);
+   aProvinces[256][0]="KOS";
+   aProvinces[256][1]="RU";
+   aProvinces[256][2]="Kostroma";
+
+   aProvinces[257]=new Array(2);
+   aProvinces[257][0]="KDA";
+   aProvinces[257][1]="RU";
+   aProvinces[257][2]="Krasnodar";
+
+   aProvinces[258]=new Array(2);
+   aProvinces[258][0]="KYA";
+   aProvinces[258][1]="RU";
+   aProvinces[258][2]="Krasnoyarsk";
+
+   aProvinces[259]=new Array(2);
+   aProvinces[259][0]="KGN";
+   aProvinces[259][1]="RU";
+   aProvinces[259][2]="Kurgan";
+
+   aProvinces[260]=new Array(2);
+   aProvinces[260][0]="KRS";
+   aProvinces[260][1]="RU";
+   aProvinces[260][2]="Kursk";
+
+   aProvinces[261]=new Array(2);
+   aProvinces[261][0]="LEN";
+   aProvinces[261][1]="RU";
+   aProvinces[261][2]="Leningrad";
+
+   aProvinces[262]=new Array(2);
+   aProvinces[262][0]="LIP";
+   aProvinces[262][1]="RU";
+   aProvinces[262][2]="Lipetsk";
+
+   aProvinces[263]=new Array(2);
+   aProvinces[263][0]="MAG";
+   aProvinces[263][1]="RU";
+   aProvinces[263][2]="Magadan";
+
+   aProvinces[264]=new Array(2);
+   aProvinces[264][0]="ME";
+   aProvinces[264][1]="RU";
+   aProvinces[264][2]="Mariy-El";
+
+   aProvinces[265]=new Array(2);
+   aProvinces[265][0]="MO";
+   aProvinces[265][1]="RU";
+   aProvinces[265][2]="Mordovia";
+
+   aProvinces[266]=new Array(2);
+   aProvinces[266][0]="MOW";
+   aProvinces[266][1]="RU";
+   aProvinces[266][2]="Moscow City";
+
+   aProvinces[267]=new Array(2);
+   aProvinces[267][0]="MOS";
+   aProvinces[267][1]="RU";
+   aProvinces[267][2]="Moskva";
+
+   aProvinces[268]=new Array(2);
+   aProvinces[268][0]="MUR";
+   aProvinces[268][1]="RU";
+   aProvinces[268][2]="Murmansk";
+
+   aProvinces[269]=new Array(2);
+   aProvinces[269][0]="NEN";
+   aProvinces[269][1]="RU";
+   aProvinces[269][2]="Nenets";
+
+   aProvinces[270]=new Array(2);
+   aProvinces[270][0]="NIZ";
+   aProvinces[270][1]="RU";
+   aProvinces[270][2]="Nizhegorod";
+
+   aProvinces[271]=new Array(2);
+   aProvinces[271][0]="SE";
+   aProvinces[271][1]="RU";
+   aProvinces[271][2]="North Ossetia";
+
+   aProvinces[272]=new Array(2);
+   aProvinces[272][0]="NGR";
+   aProvinces[272][1]="RU";
+   aProvinces[272][2]="Novgorod";
+
+   aProvinces[273]=new Array(2);
+   aProvinces[273][0]="NVS";
+   aProvinces[273][1]="RU";
+   aProvinces[273][2]="Novosibirsk";
+
+   aProvinces[274]=new Array(2);
+   aProvinces[274][0]="OMS";
+   aProvinces[274][1]="RU";
+   aProvinces[274][2]="Omsk";
+
+   aProvinces[275]=new Array(2);
+   aProvinces[275][0]="ORL";
+   aProvinces[275][1]="RU";
+   aProvinces[275][2]="Orel";
+
+   aProvinces[276]=new Array(2);
+   aProvinces[276][0]="ORE";
+   aProvinces[276][1]="RU";
+   aProvinces[276][2]="Orenburg";
+
+   aProvinces[277]=new Array(2);
+   aProvinces[277][0]="PNZ";
+   aProvinces[277][1]="RU";
+   aProvinces[277][2]="Penza";
+
+   aProvinces[278]=new Array(2);
+   aProvinces[278][0]="PER";
+   aProvinces[278][1]="RU";
+   aProvinces[278][2]="Perm'";
+
+   aProvinces[279]=new Array(2);
+   aProvinces[279][0]="PRI";
+   aProvinces[279][1]="RU";
+   aProvinces[279][2]="Primor'ye";
+
+   aProvinces[280]=new Array(2);
+   aProvinces[280][0]="PSK";
+   aProvinces[280][1]="RU";
+   aProvinces[280][2]="Pskov";
+
+   aProvinces[281]=new Array(2);
+   aProvinces[281][0]="ROS";
+   aProvinces[281][1]="RU";
+   aProvinces[281][2]="Rostov";
+
+   aProvinces[282]=new Array(2);
+   aProvinces[282][0]="RYA";
+   aProvinces[282][1]="RU";
+   aProvinces[282][2]="Ryazan'";
+
+   aProvinces[283]=new Array(2);
+   aProvinces[283][0]="SPE";
+   aProvinces[283][1]="RU";
+   aProvinces[283][2]="Saint Petersburg City";
+
+   aProvinces[284]=new Array(2);
+   aProvinces[284][0]="SA";
+   aProvinces[284][1]="RU";
+   aProvinces[284][2]="Sakha";
+
+   aProvinces[285]=new Array(2);
+   aProvinces[285][0]="SAK";
+   aProvinces[285][1]="RU";
+   aProvinces[285][2]="Sakhalin";
+
+   aProvinces[286]=new Array(2);
+   aProvinces[286][0]="SAM";
+   aProvinces[286][1]="RU";
+   aProvinces[286][2]="Samara";
+
+   aProvinces[287]=new Array(2);
+   aProvinces[287][0]="SAR";
+   aProvinces[287][1]="RU";
+   aProvinces[287][2]="Saratov";
+
+   aProvinces[288]=new Array(2);
+   aProvinces[288][0]="SMO";
+   aProvinces[288][1]="RU";
+   aProvinces[288][2]="Smolensk";
+
+   aProvinces[289]=new Array(2);
+   aProvinces[289][0]="STA";
+   aProvinces[289][1]="RU";
+   aProvinces[289][2]="Stavropol'";
+
+   aProvinces[290]=new Array(2);
+   aProvinces[290][0]="SVE";
+   aProvinces[290][1]="RU";
+   aProvinces[290][2]="Sverdlovsk";
+
+   aProvinces[291]=new Array(2);
+   aProvinces[291][0]="TAM";
+   aProvinces[291][1]="RU";
+   aProvinces[291][2]="Tambov";
+
+   aProvinces[292]=new Array(2);
+   aProvinces[292][0]="TA";
+   aProvinces[292][1]="RU";
+   aProvinces[292][2]="Tatarstan";
+
+   aProvinces[293]=new Array(2);
+   aProvinces[293][0]="TOM";
+   aProvinces[293][1]="RU";
+   aProvinces[293][2]="Tomsk";
+
+   aProvinces[294]=new Array(2);
+   aProvinces[294][0]="TUL";
+   aProvinces[294][1]="RU";
+   aProvinces[294][2]="Tula";
+
+   aProvinces[295]=new Array(2);
+   aProvinces[295][0]="TY";
+   aProvinces[295][1]="RU";
+   aProvinces[295][2]="Tuva";
+
+   aProvinces[296]=new Array(2);
+   aProvinces[296][0]="TVE";
+   aProvinces[296][1]="RU";
+   aProvinces[296][2]="Tver'";
+
+   aProvinces[297]=new Array(2);
+   aProvinces[297][0]="TYU";
+   aProvinces[297][1]="RU";
+   aProvinces[297][2]="Tyumen'";
+
+   aProvinces[298]=new Array(2);
+   aProvinces[298][0]="UD";
+   aProvinces[298][1]="RU";
+   aProvinces[298][2]="Udmurt";
+
+   aProvinces[299]=new Array(2);
+   aProvinces[299][0]="ULY";
+   aProvinces[299][1]="RU";
+   aProvinces[299][2]="Ul'yanovsk";
+
+   aProvinces[300]=new Array(2);
+   aProvinces[300][0]="VLA";
+   aProvinces[300][1]="RU";
+   aProvinces[300][2]="Vladimir";
+
+   aProvinces[301]=new Array(2);
+   aProvinces[301][0]="VGG";
+   aProvinces[301][1]="RU";
+   aProvinces[301][2]="Volgograd";
+
+   aProvinces[302]=new Array(2);
+   aProvinces[302][0]="VLG";
+   aProvinces[302][1]="RU";
+   aProvinces[302][2]="Vologda";
+
+   aProvinces[303]=new Array(2);
+   aProvinces[303][0]="VOR";
+   aProvinces[303][1]="RU";
+   aProvinces[303][2]="Voronezh";
+
+   aProvinces[304]=new Array(2);
+   aProvinces[304][0]="YAN";
+   aProvinces[304][1]="RU";
+   aProvinces[304][2]="Yamal-Nenets";
+
+   aProvinces[305]=new Array(2);
+   aProvinces[305][0]="YAR";
+   aProvinces[305][1]="RU";
+   aProvinces[305][2]="Yaroslavl'";
+
+   aProvinces[306]=new Array(2);
+   aProvinces[306][0]="YEV";
+   aProvinces[306][1]="RU";
+   aProvinces[306][2]="Yevrey";
+
+   aProvinces[307]=new Array(2);
+   aProvinces[307][0]="ZAB";
+   aProvinces[307][1]="RU";
+   aProvinces[307][2]="Zabaykal'ye";
+
+   aProvinces[308]=new Array(2);
+   aProvinces[308][0]="K ";
+   aProvinces[308][1]="SE";
+   aProvinces[308][2]="Blekinge ";
+
+   aProvinces[309]=new Array(2);
+   aProvinces[309][0]="W ";
+   aProvinces[309][1]="SE";
+   aProvinces[309][2]="Dalarna ";
+
+   aProvinces[310]=new Array(2);
+   aProvinces[310][0]="X ";
+   aProvinces[310][1]="SE";
+   aProvinces[310][2]="Gävleborg ";
+
+   aProvinces[311]=new Array(2);
+   aProvinces[311][0]="I ";
+   aProvinces[311][1]="SE";
+   aProvinces[311][2]="Gotland ";
+
+   aProvinces[312]=new Array(2);
+   aProvinces[312][0]="N ";
+   aProvinces[312][1]="SE";
+   aProvinces[312][2]="Halland ";
+
+   aProvinces[313]=new Array(2);
+   aProvinces[313][0]="Z ";
+   aProvinces[313][1]="SE";
+   aProvinces[313][2]="Jämtland ";
+
+   aProvinces[314]=new Array(2);
+   aProvinces[314][0]="F ";
+   aProvinces[314][1]="SE";
+   aProvinces[314][2]="Jönköping ";
+
+   aProvinces[315]=new Array(2);
+   aProvinces[315][0]="H ";
+   aProvinces[315][1]="SE";
+   aProvinces[315][2]="Kalmar ";
+
+   aProvinces[316]=new Array(2);
+   aProvinces[316][0]="G ";
+   aProvinces[316][1]="SE";
+   aProvinces[316][2]="Kronoberg ";
+
+   aProvinces[317]=new Array(2);
+   aProvinces[317][0]="BD";
+   aProvinces[317][1]="SE";
+   aProvinces[317][2]="Norrbotten ";
+
+   aProvinces[318]=new Array(2);
+   aProvinces[318][0]="T ";
+   aProvinces[318][1]="SE";
+   aProvinces[318][2]="Örebro ";
+
+   aProvinces[319]=new Array(2);
+   aProvinces[319][0]="E ";
+   aProvinces[319][1]="SE";
+   aProvinces[319][2]="Östergötland ";
+
+   aProvinces[320]=new Array(2);
+   aProvinces[320][0]="M ";
+   aProvinces[320][1]="SE";
+   aProvinces[320][2]="Skåne ";
+
+   aProvinces[321]=new Array(2);
+   aProvinces[321][0]="D ";
+   aProvinces[321][1]="SE";
+   aProvinces[321][2]="Södermanland ";
+
+   aProvinces[322]=new Array(2);
+   aProvinces[322][0]="AB";
+   aProvinces[322][1]="SE";
+   aProvinces[322][2]="Stockholm ";
+
+   aProvinces[323]=new Array(2);
+   aProvinces[323][0]="C ";
+   aProvinces[323][1]="SE";
+   aProvinces[323][2]="Uppsala ";
+
+   aProvinces[324]=new Array(2);
+   aProvinces[324][0]="S ";
+   aProvinces[324][1]="SE";
+   aProvinces[324][2]="Värmland ";
+
+   aProvinces[325]=new Array(2);
+   aProvinces[325][0]="AC";
+   aProvinces[325][1]="SE";
+   aProvinces[325][2]="Västerbotten ";
+
+   aProvinces[326]=new Array(2);
+   aProvinces[326][0]="Y ";
+   aProvinces[326][1]="SE";
+   aProvinces[326][2]="Västernorrland ";
+
+   aProvinces[327]=new Array(2);
+   aProvinces[327][0]="U ";
+   aProvinces[327][1]="SE";
+   aProvinces[327][2]="Västmanland ";
+
+   aProvinces[328]=new Array(2);
+   aProvinces[328][0]="O ";
+   aProvinces[328][1]="SE";
+   aProvinces[328][2]="Västra Götaland";
+
+   aProvinces[329]=new Array(2);
+   aProvinces[329][0]="SG";
+   aProvinces[329][1]="SG";
+   aProvinces[329][2]="Singapore";
+
+   aProvinces[330]=new Array(2);
+   aProvinces[330][0]="5";
+   aProvinces[330][1]="SK";
+   aProvinces[330][2]="Žilinský";
+
+   aProvinces[331]=new Array(2);
+   aProvinces[331][0]="6";
+   aProvinces[331][1]="SK";
+   aProvinces[331][2]="Banskobystrický";
+
+   aProvinces[332]=new Array(2);
+   aProvinces[332][0]="1";
+   aProvinces[332][1]="SK";
+   aProvinces[332][2]="Bratislavský";
+
+   aProvinces[333]=new Array(2);
+   aProvinces[333][0]="8";
+   aProvinces[333][1]="SK";
+   aProvinces[333][2]="Košický";
+
+   aProvinces[334]=new Array(2);
+   aProvinces[334][0]="4";
+   aProvinces[334][1]="SK";
+   aProvinces[334][2]="Nitriansky";
+
+   aProvinces[335]=new Array(2);
+   aProvinces[335][0]="7";
+   aProvinces[335][1]="SK";
+   aProvinces[335][2]="Prešovský";
+
+   aProvinces[336]=new Array(2);
+   aProvinces[336][0]="3";
+   aProvinces[336][1]="SK";
+   aProvinces[336][2]="Trenciansky";
+
+   aProvinces[337]=new Array(2);
+   aProvinces[337][0]="2";
+   aProvinces[337][1]="SK";
+   aProvinces[337][2]="Trnavský";
+
+   aProvinces[338]=new Array(2);
+   aProvinces[338][0]="ABE";
+   aProvinces[338][1]="UK";
+   aProvinces[338][2]="Aberdeen City";
+
+   aProvinces[339]=new Array(2);
+   aProvinces[339][0]="ABD";
+   aProvinces[339][1]="UK";
+   aProvinces[339][2]="Aberdeenshire";
+
+   aProvinces[340]=new Array(2);
+   aProvinces[340][0]="AGY";
+   aProvinces[340][1]="UK";
+   aProvinces[340][2]="Anglesey";
+
+   aProvinces[341]=new Array(2);
+   aProvinces[341][0]="ANS";
+   aProvinces[341][1]="UK";
+   aProvinces[341][2]="Angus";
+
+   aProvinces[342]=new Array(2);
+   aProvinces[342][0]="ANT";
+   aProvinces[342][1]="UK";
+   aProvinces[342][2]="Antrim";
+
+   aProvinces[343]=new Array(2);
+   aProvinces[343][0]="ARD";
+   aProvinces[343][1]="UK";
+   aProvinces[343][2]="Ards";
+
+   aProvinces[344]=new Array(2);
+   aProvinces[344][0]="AGB";
+   aProvinces[344][1]="UK";
+   aProvinces[344][2]="Argyll and Bute";
+
+   aProvinces[345]=new Array(2);
+   aProvinces[345][0]="ARM";
+   aProvinces[345][1]="UK";
+   aProvinces[345][2]="Armagh";
+
+   aProvinces[346]=new Array(2);
+   aProvinces[346][0]="AVN";
+   aProvinces[346][1]="UK";
+   aProvinces[346][2]="Avon";
+
+   aProvinces[347]=new Array(2);
+   aProvinces[347][0]="BLA";
+   aProvinces[347][1]="UK";
+   aProvinces[347][2]="Ballymena";
+
+   aProvinces[348]=new Array(2);
+   aProvinces[348][0]="BLY";
+   aProvinces[348][1]="UK";
+   aProvinces[348][2]="Ballymoney";
+
+   aProvinces[349]=new Array(2);
+   aProvinces[349][0]="BNB";
+   aProvinces[349][1]="UK";
+   aProvinces[349][2]="Banbridge";
+
+   aProvinces[350]=new Array(2);
+   aProvinces[350][0]="BAS";
+   aProvinces[350][1]="UK";
+   aProvinces[350][2]="Bath and NE Somerset";
+
+   aProvinces[351]=new Array(2);
+   aProvinces[351][0]="BDF";
+   aProvinces[351][1]="UK";
+   aProvinces[351][2]="Bedfordshire";
+
+   aProvinces[352]=new Array(2);
+   aProvinces[352][0]="BFS";
+   aProvinces[352][1]="UK";
+   aProvinces[352][2]="Belfast";
+
+   aProvinces[353]=new Array(2);
+   aProvinces[353][0]="BGW";
+   aProvinces[353][1]="UK";
+   aProvinces[353][2]="Blaenau Gwent";
+
+   aProvinces[354]=new Array(2);
+   aProvinces[354][0]="BST";
+   aProvinces[354][1]="UK";
+   aProvinces[354][2]="Bristol, City of";
+
+   aProvinces[355]=new Array(2);
+   aProvinces[355][0]="BKM";
+   aProvinces[355][1]="UK";
+   aProvinces[355][2]="Buckinghamshire";
+
+   aProvinces[356]=new Array(2);
+   aProvinces[356][0]="CAY";
+   aProvinces[356][1]="UK";
+   aProvinces[356][2]="Caerphilly";
+
+   aProvinces[357]=new Array(2);
+   aProvinces[357][0]="CAM";
+   aProvinces[357][1]="UK";
+   aProvinces[357][2]="Cambridgeshire";
+
+   aProvinces[358]=new Array(2);
+   aProvinces[358][0]="CRF";
+   aProvinces[358][1]="UK";
+   aProvinces[358][2]="Cardiff";
+
+   aProvinces[359]=new Array(2);
+   aProvinces[359][0]="CMN";
+   aProvinces[359][1]="UK";
+   aProvinces[359][2]="Carmarthenshire";
+
+   aProvinces[360]=new Array(2);
+   aProvinces[360][0]="CKF";
+   aProvinces[360][1]="UK";
+   aProvinces[360][2]="Carrickfergus";
+
+   aProvinces[361]=new Array(2);
+   aProvinces[361][0]="CSR";
+   aProvinces[361][1]="UK";
+   aProvinces[361][2]="Castlereagh";
+
+   aProvinces[362]=new Array(2);
+   aProvinces[362][0]="CGN";
+   aProvinces[362][1]="UK";
+   aProvinces[362][2]="Ceredigion";
+
+   aProvinces[363]=new Array(2);
+   aProvinces[363][0]="CHS";
+   aProvinces[363][1]="UK";
+   aProvinces[363][2]="Cheshire";
+
+   aProvinces[364]=new Array(2);
+   aProvinces[364][0]="CLK";
+   aProvinces[364][1]="UK";
+   aProvinces[364][2]="Clackmannanshire";
+
+   aProvinces[365]=new Array(2);
+   aProvinces[365][0]="CLR";
+   aProvinces[365][1]="UK";
+   aProvinces[365][2]="Coleraine";
+
+   aProvinces[366]=new Array(2);
+   aProvinces[366][0]="CWY";
+   aProvinces[366][1]="UK";
+   aProvinces[366][2]="Conwy";
+
+   aProvinces[367]=new Array(2);
+   aProvinces[367][0]="CKT";
+   aProvinces[367][1]="UK";
+   aProvinces[367][2]="Cookstown";
+
+   aProvinces[368]=new Array(2);
+   aProvinces[368][0]="CON";
+   aProvinces[368][1]="UK";
+   aProvinces[368][2]="Cornwall";
+
+   aProvinces[369]=new Array(2);
+   aProvinces[369][0]="CGV";
+   aProvinces[369][1]="UK";
+   aProvinces[369][2]="Craigavon";
+
+   aProvinces[370]=new Array(2);
+   aProvinces[370][0]="CMA";
+   aProvinces[370][1]="UK";
+   aProvinces[370][2]="Cumbria";
+
+   aProvinces[371]=new Array(2);
+   aProvinces[371][0]="DEN";
+   aProvinces[371][1]="UK";
+   aProvinces[371][2]="Denbighshire";
+
+   aProvinces[372]=new Array(2);
+   aProvinces[372][0]="DBY";
+   aProvinces[372][1]="UK";
+   aProvinces[372][2]="Derbyshire";
+
+   aProvinces[373]=new Array(2);
+   aProvinces[373][0]="DRY";
+   aProvinces[373][1]="UK";
+   aProvinces[373][2]="Derry/Londonderry";
+
+   aProvinces[374]=new Array(2);
+   aProvinces[374][0]="DEV";
+   aProvinces[374][1]="UK";
+   aProvinces[374][2]="Devon";
+
+   aProvinces[375]=new Array(2);
+   aProvinces[375][0]="DOR";
+   aProvinces[375][1]="UK";
+   aProvinces[375][2]="Dorset";
+
+   aProvinces[376]=new Array(2);
+   aProvinces[376][0]="DOW";
+   aProvinces[376][1]="UK";
+   aProvinces[376][2]="Down";
+
+   aProvinces[377]=new Array(2);
+   aProvinces[377][0]="DGY";
+   aProvinces[377][1]="UK";
+   aProvinces[377][2]="Dumfries and Galloway";
+
+   aProvinces[378]=new Array(2);
+   aProvinces[378][0]="EDU";
+   aProvinces[378][1]="UK";
+   aProvinces[378][2]="Dunbartonshire";
+
+   aProvinces[379]=new Array(2);
+   aProvinces[379][0]="DND";
+   aProvinces[379][1]="UK";
+   aProvinces[379][2]="Dundee";
+
+   aProvinces[380]=new Array(2);
+   aProvinces[380][0]="DGN";
+   aProvinces[380][1]="UK";
+   aProvinces[380][2]="Dungannon";
+
+   aProvinces[381]=new Array(2);
+   aProvinces[381][0]="DUR";
+   aProvinces[381][1]="UK";
+   aProvinces[381][2]="Durham";
+
+   aProvinces[382]=new Array(2);
+   aProvinces[382][0]="EAY";
+   aProvinces[382][1]="UK";
+   aProvinces[382][2]="East Ayrshire";
+
+   aProvinces[383]=new Array(2);
+   aProvinces[383][0]="ELN";
+   aProvinces[383][1]="UK";
+   aProvinces[383][2]="East Lothian";
+
+   aProvinces[384]=new Array(2);
+   aProvinces[384][0]="EM";
+   aProvinces[384][1]="UK";
+   aProvinces[384][2]="East Midlands";
+
+   aProvinces[385]=new Array(2);
+   aProvinces[385][0]="ERW";
+   aProvinces[385][1]="UK";
+   aProvinces[385][2]="East Renfrewshire";
+
+   aProvinces[386]=new Array(2);
+   aProvinces[386][0]="ERY";
+   aProvinces[386][1]="UK";
+   aProvinces[386][2]="East Riding Yorkshire";
+
+   aProvinces[387]=new Array(2);
+   aProvinces[387][0]="ESX";
+   aProvinces[387][1]="UK";
+   aProvinces[387][2]="East Sussex";
+
+   aProvinces[388]=new Array(2);
+   aProvinces[388][0]="EDH";
+   aProvinces[388][1]="UK";
+   aProvinces[388][2]="Edinburgh";
+
+   aProvinces[389]=new Array(2);
+   aProvinces[389][0]="ELS";
+   aProvinces[389][1]="UK";
+   aProvinces[389][2]="Eilean Siar";
+
+   aProvinces[390]=new Array(2);
+   aProvinces[390][0]="EN";
+   aProvinces[390][1]="UK";
+   aProvinces[390][2]="England";
+
+   aProvinces[391]=new Array(2);
+   aProvinces[391][0]="ESS";
+   aProvinces[391][1]="UK";
+   aProvinces[391][2]="Essex";
+
+   aProvinces[392]=new Array(2);
+   aProvinces[392][0]="FAL";
+   aProvinces[392][1]="UK";
+   aProvinces[392][2]="Falkirk";
+
+   aProvinces[393]=new Array(2);
+   aProvinces[393][0]="FER";
+   aProvinces[393][1]="UK";
+   aProvinces[393][2]="Fermanagh";
+
+   aProvinces[394]=new Array(2);
+   aProvinces[394][0]="FIF";
+   aProvinces[394][1]="UK";
+   aProvinces[394][2]="Fife";
+
+   aProvinces[395]=new Array(2);
+   aProvinces[395][0]="FLN";
+   aProvinces[395][1]="UK";
+   aProvinces[395][2]="Flintshire";
+
+   aProvinces[396]=new Array(2);
+   aProvinces[396][0]="GLG";
+   aProvinces[396][1]="UK";
+   aProvinces[396][2]="Glasgow";
+
+   aProvinces[397]=new Array(2);
+   aProvinces[397][0]="GLS";
+   aProvinces[397][1]="UK";
+   aProvinces[397][2]="Gloucestershire";
+
+   aProvinces[398]=new Array(2);
+   aProvinces[398][0]="LN";
+   aProvinces[398][1]="UK";
+   aProvinces[398][2]="Greater London";
+
+   aProvinces[399]=new Array(2);
+   aProvinces[399][0]="MAN";
+   aProvinces[399][1]="UK";
+   aProvinces[399][2]="Greater Manchester";
+
+   aProvinces[400]=new Array(2);
+   aProvinces[400][0]="GWN";
+   aProvinces[400][1]="UK";
+   aProvinces[400][2]="Gwynedd";
+
+   aProvinces[401]=new Array(2);
+   aProvinces[401][0]="HAM";
+   aProvinces[401][1]="UK";
+   aProvinces[401][2]="Hampshire";
+
+   aProvinces[402]=new Array(2);
+   aProvinces[402][0]="HPL";
+   aProvinces[402][1]="UK";
+   aProvinces[402][2]="Hartlepool";
+
+   aProvinces[403]=new Array(2);
+   aProvinces[403][0]="HEF";
+   aProvinces[403][1]="UK";
+   aProvinces[403][2]="Herefordshire, County of";
+
+   aProvinces[404]=new Array(2);
+   aProvinces[404][0]="HRT";
+   aProvinces[404][1]="UK";
+   aProvinces[404][2]="Hertfordshire";
+
+   aProvinces[405]=new Array(2);
+   aProvinces[405][0]="HLD";
+   aProvinces[405][1]="UK";
+   aProvinces[405][2]="Highlands";
+
+   aProvinces[406]=new Array(2);
+   aProvinces[406][0]="IVC";
+   aProvinces[406][1]="UK";
+   aProvinces[406][2]="Inverclyde";
+
+   aProvinces[407]=new Array(2);
+   aProvinces[407][0]="IOW";
+   aProvinces[407][1]="UK";
+   aProvinces[407][2]="Isle of Wight";
+
+   aProvinces[408]=new Array(2);
+   aProvinces[408][0]="IOS";
+   aProvinces[408][1]="UK";
+   aProvinces[408][2]="Isles of Scilly";
+
+   aProvinces[409]=new Array(2);
+   aProvinces[409][0]="KEN";
+   aProvinces[409][1]="UK";
+   aProvinces[409][2]="Kent";
+
+   aProvinces[410]=new Array(2);
+   aProvinces[410][0]="KHL";
+   aProvinces[410][1]="UK";
+   aProvinces[410][2]="Kingston Upon Hull";
+
+   aProvinces[411]=new Array(2);
+   aProvinces[411][0]="KIR";
+   aProvinces[411][1]="UK";
+   aProvinces[411][2]="Kirklees";
+
+   aProvinces[412]=new Array(2);
+   aProvinces[412][0]="LAN";
+   aProvinces[412][1]="UK";
+   aProvinces[412][2]="Lancashire";
+
+   aProvinces[413]=new Array(2);
+   aProvinces[413][0]="LRN";
+   aProvinces[413][1]="UK";
+   aProvinces[413][2]="Larne";
+
+   aProvinces[414]=new Array(2);
+   aProvinces[414][0]="LEC";
+   aProvinces[414][1]="UK";
+   aProvinces[414][2]="Leicestershire";
+
+   aProvinces[415]=new Array(2);
+   aProvinces[415][0]="LMV";
+   aProvinces[415][1]="UK";
+   aProvinces[415][2]="Limavady";
+
+   aProvinces[416]=new Array(2);
+   aProvinces[416][0]="LIN";
+   aProvinces[416][1]="UK";
+   aProvinces[416][2]="Lincolnshire";
+
+   aProvinces[417]=new Array(2);
+   aProvinces[417][0]="LSB";
+   aProvinces[417][1]="UK";
+   aProvinces[417][2]="Lisburn";
+
+   aProvinces[418]=new Array(2);
+   aProvinces[418][0]="LND";
+   aProvinces[418][1]="UK";
+   aProvinces[418][2]="London, City of";
+
+   aProvinces[419]=new Array(2);
+   aProvinces[419][0]="MFT";
+   aProvinces[419][1]="UK";
+   aProvinces[419][2]="Magherafelt";
+
+   aProvinces[420]=new Array(2);
+   aProvinces[420][0]="MTY";
+   aProvinces[420][1]="UK";
+   aProvinces[420][2]="Merthyr Tydfil";
+
+   aProvinces[421]=new Array(2);
+   aProvinces[421][0]="MLN";
+   aProvinces[421][1]="UK";
+   aProvinces[421][2]="Mid Lothian";
+
+   aProvinces[422]=new Array(2);
+   aProvinces[422][0]="MON";
+   aProvinces[422][1]="UK";
+   aProvinces[422][2]="Monmouthshire";
+
+   aProvinces[423]=new Array(2);
+   aProvinces[423][0]="MRY";
+   aProvinces[423][1]="UK";
+   aProvinces[423][2]="Moray";
+
+   aProvinces[424]=new Array(2);
+   aProvinces[424][0]="MYL";
+   aProvinces[424][1]="UK";
+   aProvinces[424][2]="Moyle";
+
+   aProvinces[425]=new Array(2);
+   aProvinces[425][0]="NTL";
+   aProvinces[425][1]="UK";
+   aProvinces[425][2]="Neath & Port Talbot";
+
+   aProvinces[426]=new Array(2);
+   aProvinces[426][0]="NWP";
+   aProvinces[426][1]="UK";
+   aProvinces[426][2]="Newport";
+
+   aProvinces[427]=new Array(2);
+   aProvinces[427][0]="NYM";
+   aProvinces[427][1]="UK";
+   aProvinces[427][2]="Newry and Mourne";
+
+   aProvinces[428]=new Array(2);
+   aProvinces[428][0]="NTA";
+   aProvinces[428][1]="UK";
+   aProvinces[428][2]="Newtownabbey";
+
+   aProvinces[429]=new Array(2);
+   aProvinces[429][0]="NFK";
+   aProvinces[429][1]="UK";
+   aProvinces[429][2]="Norfolk";
+
+   aProvinces[430]=new Array(2);
+   aProvinces[430][0]="NAY";
+   aProvinces[430][1]="UK";
+   aProvinces[430][2]="North Ayrshire";
+
+   aProvinces[431]=new Array(2);
+   aProvinces[431][0]="NDN";
+   aProvinces[431][1]="UK";
+   aProvinces[431][2]="North Down";
+
+   aProvinces[432]=new Array(2);
+   aProvinces[432][0]="NE";
+   aProvinces[432][1]="UK";
+   aProvinces[432][2]="North East";
+
+   aProvinces[433]=new Array(2);
+   aProvinces[433][0]="NEL";
+   aProvinces[433][1]="UK";
+   aProvinces[433][2]="North East Lincolnshire";
+
+   aProvinces[434]=new Array(2);
+   aProvinces[434][0]="NLK";
+   aProvinces[434][1]="UK";
+   aProvinces[434][2]="North Lanarkshire";
+
+   aProvinces[435]=new Array(2);
+   aProvinces[435][0]="NLN";
+   aProvinces[435][1]="UK";
+   aProvinces[435][2]="North Lincolnshire";
+
+   aProvinces[436]=new Array(2);
+   aProvinces[436][0]="NSM";
+   aProvinces[436][1]="UK";
+   aProvinces[436][2]="North Somerset";
+
+   aProvinces[437]=new Array(2);
+   aProvinces[437][0]="NW";
+   aProvinces[437][1]="UK";
+   aProvinces[437][2]="North West";
+
+   aProvinces[438]=new Array(2);
+   aProvinces[438][0]="NYK";
+   aProvinces[438][1]="UK";
+   aProvinces[438][2]="North Yorkshire";
+
+   aProvinces[439]=new Array(2);
+   aProvinces[439][0]="NTH";
+   aProvinces[439][1]="UK";
+   aProvinces[439][2]="Northamptonshire";
+
+   aProvinces[440]=new Array(2);
+   aProvinces[440][0]="NI";
+   aProvinces[440][1]="UK";
+   aProvinces[440][2]="Northern Ireland";
+
+   aProvinces[441]=new Array(2);
+   aProvinces[441][0]="NBL";
+   aProvinces[441][1]="UK";
+   aProvinces[441][2]="Northumberland";
+
+   aProvinces[442]=new Array(2);
+   aProvinces[442][0]="NTT";
+   aProvinces[442][1]="UK";
+   aProvinces[442][2]="Nottinghamshire";
+
+   aProvinces[443]=new Array(2);
+   aProvinces[443][0]="OMH";
+   aProvinces[443][1]="UK";
+   aProvinces[443][2]="Omagh";
+
+   aProvinces[444]=new Array(2);
+   aProvinces[444][0]="ORK";
+   aProvinces[444][1]="UK";
+   aProvinces[444][2]="Orkney Islands";
+
+   aProvinces[445]=new Array(2);
+   aProvinces[445][0]="OXF";
+   aProvinces[445][1]="UK";
+   aProvinces[445][2]="Oxfordshire";
+
+   aProvinces[446]=new Array(2);
+   aProvinces[446][0]="PEM";
+   aProvinces[446][1]="UK";
+   aProvinces[446][2]="Pembrokeshire";
+
+   aProvinces[447]=new Array(2);
+   aProvinces[447][0]="PKN";
+   aProvinces[447][1]="UK";
+   aProvinces[447][2]="Perth and Kinross";
+
+   aProvinces[448]=new Array(2);
+   aProvinces[448][0]="POW";
+   aProvinces[448][1]="UK";
+   aProvinces[448][2]="Powys";
+
+   aProvinces[449]=new Array(2);
+   aProvinces[449][0]="RCC";
+   aProvinces[449][1]="UK";
+   aProvinces[449][2]="Redcar and Cleveland";
+
+   aProvinces[450]=new Array(2);
+   aProvinces[450][0]="RFW";
+   aProvinces[450][1]="UK";
+   aProvinces[450][2]="Renfrewshire";
+
+   aProvinces[451]=new Array(2);
+   aProvinces[451][0]="RCT";
+   aProvinces[451][1]="UK";
+   aProvinces[451][2]="Rhonda Cynon Taff";
+
+   aProvinces[452]=new Array(2);
+   aProvinces[452][0]="RUT";
+   aProvinces[452][1]="UK";
+   aProvinces[452][2]="Rutland";
+
+   aProvinces[453]=new Array(2);
+   aProvinces[453][0]="ST";
+   aProvinces[453][1]="UK";
+   aProvinces[453][2]="Scotland";
+
+   aProvinces[454]=new Array(2);
+   aProvinces[454][0]="SCB";
+   aProvinces[454][1]="UK";
+   aProvinces[454][2]="Scottish Borders";
+
+   aProvinces[455]=new Array(2);
+   aProvinces[455][0]="ZET";
+   aProvinces[455][1]="UK";
+   aProvinces[455][2]="Shetland";
+
+   aProvinces[456]=new Array(2);
+   aProvinces[456][0]="SHR";
+   aProvinces[456][1]="UK";
+   aProvinces[456][2]="Shropshire";
+
+   aProvinces[457]=new Array(2);
+   aProvinces[457][0]="SOM";
+   aProvinces[457][1]="UK";
+   aProvinces[457][2]="Somerset";
+
+   aProvinces[458]=new Array(2);
+   aProvinces[458][0]="SAY";
+   aProvinces[458][1]="UK";
+   aProvinces[458][2]="South Ayrshire";
+
+   aProvinces[459]=new Array(2);
+   aProvinces[459][0]="SE";
+   aProvinces[459][1]="UK";
+   aProvinces[459][2]="South East";
+
+   aProvinces[460]=new Array(2);
+   aProvinces[460][0]="VGL";
+   aProvinces[460][1]="UK";
+   aProvinces[460][2]="South Glamorgan";
+
+   aProvinces[461]=new Array(2);
+   aProvinces[461][0]="SGC";
+   aProvinces[461][1]="UK";
+   aProvinces[461][2]="South Gloucesteshire";
+
+   aProvinces[462]=new Array(2);
+   aProvinces[462][0]="SLK";
+   aProvinces[462][1]="UK";
+   aProvinces[462][2]="South Lanarkshire";
+
+   aProvinces[463]=new Array(2);
+   aProvinces[463][0]="SW";
+   aProvinces[463][1]="UK";
+   aProvinces[463][2]="South West";
+
+   aProvinces[464]=new Array(2);
+   aProvinces[464][0]="STS";
+   aProvinces[464][1]="UK";
+   aProvinces[464][2]="Staffordshire";
+
+   aProvinces[465]=new Array(2);
+   aProvinces[465][0]="STG";
+   aProvinces[465][1]="UK";
+   aProvinces[465][2]="Stirling";
+
+   aProvinces[466]=new Array(2);
+   aProvinces[466][0]="STT";
+   aProvinces[466][1]="UK";
+   aProvinces[466][2]="Stockton On Tees";
+
+   aProvinces[467]=new Array(2);
+   aProvinces[467][0]="STB";
+   aProvinces[467][1]="UK";
+   aProvinces[467][2]="Strabane";
+
+   aProvinces[468]=new Array(2);
+   aProvinces[468][0]="SFK";
+   aProvinces[468][1]="UK";
+   aProvinces[468][2]="Suffolk";
+
+   aProvinces[469]=new Array(2);
+   aProvinces[469][0]="SRY";
+   aProvinces[469][1]="UK";
+   aProvinces[469][2]="Surrey";
+
+   aProvinces[470]=new Array(2);
+   aProvinces[470][0]="SWA";
+   aProvinces[470][1]="UK";
+   aProvinces[470][2]="Swansea";
+
+   aProvinces[471]=new Array(2);
+   aProvinces[471][0]="TOF";
+   aProvinces[471][1]="UK";
+   aProvinces[471][2]="Torfaen";
+
+   aProvinces[472]=new Array(2);
+   aProvinces[472][0]="WA";
+   aProvinces[472][1]="UK";
+   aProvinces[472][2]="Wales";
+
+   aProvinces[473]=new Array(2);
+   aProvinces[473][0]="WAR";
+   aProvinces[473][1]="UK";
+   aProvinces[473][2]="Warwickshire";
+
+   aProvinces[474]=new Array(2);
+   aProvinces[474][0]="WBK";
+   aProvinces[474][1]="UK";
+   aProvinces[474][2]="West Berkshire";
+
+   aProvinces[475]=new Array(2);
+   aProvinces[475][0]="WDU";
+   aProvinces[475][1]="UK";
+   aProvinces[475][2]="West Dunbartonshire";
+
+   aProvinces[476]=new Array(2);
+   aProvinces[476][0]="WLN";
+   aProvinces[476][1]="UK";
+   aProvinces[476][2]="West Lothian";
+
+   aProvinces[477]=new Array(2);
+   aProvinces[477][0]="WM";
+   aProvinces[477][1]="UK";
+   aProvinces[477][2]="West Midlands";
+
+   aProvinces[478]=new Array(2);
+   aProvinces[478][0]="WSX";
+   aProvinces[478][1]="UK";
+   aProvinces[478][2]="West Sussex";
+
+   aProvinces[479]=new Array(2);
+   aProvinces[479][0]="WIL";
+   aProvinces[479][1]="UK";
+   aProvinces[479][2]="Wiltshire";
+
+   aProvinces[480]=new Array(2);
+   aProvinces[480][0]="WRL";
+   aProvinces[480][1]="UK";
+   aProvinces[480][2]="Wirral";
+
+   aProvinces[481]=new Array(2);
+   aProvinces[481][0]="WOR";
+   aProvinces[481][1]="UK";
+   aProvinces[481][2]="Worcestershire";
+
+   aProvinces[482]=new Array(2);
+   aProvinces[482][0]="WRX";
+   aProvinces[482][1]="UK";
+   aProvinces[482][2]="Wrexham";
+
+   aProvinces[483]=new Array(2);
+   aProvinces[483][0]="YOR";
+   aProvinces[483][1]="UK";
+   aProvinces[483][2]="York";
+
+   aProvinces[484]=new Array(2);
+   aProvinces[484][0]="YH";
+   aProvinces[484][1]="UK";
+   aProvinces[484][2]="Yorkshire and The Humber";
+
+   aProvinces[485]=new Array(2);
+   aProvinces[485][0]="AL";
+   aProvinces[485][1]="US";
+   aProvinces[485][2]="Alabama";
+
+   aProvinces[486]=new Array(2);
+   aProvinces[486][0]="AK";
+   aProvinces[486][1]="US";
+   aProvinces[486][2]="Alaska";
+
+   aProvinces[487]=new Array(2);
+   aProvinces[487][0]="AS";
+   aProvinces[487][1]="US";
+   aProvinces[487][2]="American Samoa";
+
+   aProvinces[488]=new Array(2);
+   aProvinces[488][0]="AZ";
+   aProvinces[488][1]="US";
+   aProvinces[488][2]="Arizona";
+
+   aProvinces[489]=new Array(2);
+   aProvinces[489][0]="AR";
+   aProvinces[489][1]="US";
+   aProvinces[489][2]="Arkansas";
+
+   aProvinces[490]=new Array(2);
+   aProvinces[490][0]="AA";
+   aProvinces[490][1]="US";
+   aProvinces[490][2]="Armed Forces Americas";
+
+   aProvinces[491]=new Array(2);
+   aProvinces[491][0]="AE";
+   aProvinces[491][1]="US";
+   aProvinces[491][2]="Armed Forces Europe";
+
+   aProvinces[492]=new Array(2);
+   aProvinces[492][0]="AP";
+   aProvinces[492][1]="US";
+   aProvinces[492][2]="Armed Forces Pacific";
+
+   aProvinces[493]=new Array(2);
+   aProvinces[493][0]="CA";
+   aProvinces[493][1]="US";
+   aProvinces[493][2]="California";
+
+   aProvinces[494]=new Array(2);
+   aProvinces[494][0]="CO";
+   aProvinces[494][1]="US";
+   aProvinces[494][2]="Colorado";
+
+   aProvinces[495]=new Array(2);
+   aProvinces[495][0]="CT";
+   aProvinces[495][1]="US";
+   aProvinces[495][2]="Connecticut";
+
+   aProvinces[496]=new Array(2);
+   aProvinces[496][0]="DE";
+   aProvinces[496][1]="US";
+   aProvinces[496][2]="Delaware";
+
+   aProvinces[497]=new Array(2);
+   aProvinces[497][0]="DC";
+   aProvinces[497][1]="US";
+   aProvinces[497][2]="District of Columbia";
+
+   aProvinces[498]=new Array(2);
+   aProvinces[498][0]="FL";
+   aProvinces[498][1]="US";
+   aProvinces[498][2]="Florida";
+
+   aProvinces[499]=new Array(2);
+   aProvinces[499][0]="GA";
+   aProvinces[499][1]="US";
+   aProvinces[499][2]="Georgia";
+
+   aProvinces[500]=new Array(2);
+   aProvinces[500][0]="GU";
+   aProvinces[500][1]="US";
+   aProvinces[500][2]="Guam";
+
+   aProvinces[501]=new Array(2);
+   aProvinces[501][0]="HI";
+   aProvinces[501][1]="US";
+   aProvinces[501][2]="Hawaii";
+
+   aProvinces[502]=new Array(2);
+   aProvinces[502][0]="ID";
+   aProvinces[502][1]="US";
+   aProvinces[502][2]="Idaho";
+
+   aProvinces[503]=new Array(2);
+   aProvinces[503][0]="IL";
+   aProvinces[503][1]="US";
+   aProvinces[503][2]="Illinois";
+
+   aProvinces[504]=new Array(2);
+   aProvinces[504][0]="IN";
+   aProvinces[504][1]="US";
+   aProvinces[504][2]="Indiana";
+
+   aProvinces[505]=new Array(2);
+   aProvinces[505][0]="IA";
+   aProvinces[505][1]="US";
+   aProvinces[505][2]="Iowa";
+
+   aProvinces[506]=new Array(2);
+   aProvinces[506][0]="KS";
+   aProvinces[506][1]="US";
+   aProvinces[506][2]="Kansas";
+
+   aProvinces[507]=new Array(2);
+   aProvinces[507][0]="KY";
+   aProvinces[507][1]="US";
+   aProvinces[507][2]="Kentucky";
+
+   aProvinces[508]=new Array(2);
+   aProvinces[508][0]="LA";
+   aProvinces[508][1]="US";
+   aProvinces[508][2]="Louisiana";
+
+   aProvinces[509]=new Array(2);
+   aProvinces[509][0]="ME";
+   aProvinces[509][1]="US";
+   aProvinces[509][2]="Maine";
+
+   aProvinces[510]=new Array(2);
+   aProvinces[510][0]="MD";
+   aProvinces[510][1]="US";
+   aProvinces[510][2]="Maryland";
+
+   aProvinces[511]=new Array(2);
+   aProvinces[511][0]="MA";
+   aProvinces[511][1]="US";
+   aProvinces[511][2]="Massachusetts";
+
+   aProvinces[512]=new Array(2);
+   aProvinces[512][0]="MI";
+   aProvinces[512][1]="US";
+   aProvinces[512][2]="Michigan";
+
+   aProvinces[513]=new Array(2);
+   aProvinces[513][0]="MN";
+   aProvinces[513][1]="US";
+   aProvinces[513][2]="Minnesota";
+
+   aProvinces[514]=new Array(2);
+   aProvinces[514][0]="MS";
+   aProvinces[514][1]="US";
+   aProvinces[514][2]="Mississippi";
+
+   aProvinces[515]=new Array(2);
+   aProvinces[515][0]="MO";
+   aProvinces[515][1]="US";
+   aProvinces[515][2]="Missouri";
+
+   aProvinces[516]=new Array(2);
+   aProvinces[516][0]="MT";
+   aProvinces[516][1]="US";
+   aProvinces[516][2]="Montana";
+
+   aProvinces[517]=new Array(2);
+   aProvinces[517][0]="NE";
+   aProvinces[517][1]="US";
+   aProvinces[517][2]="Nebraska";
+
+   aProvinces[518]=new Array(2);
+   aProvinces[518][0]="NV";
+   aProvinces[518][1]="US";
+   aProvinces[518][2]="Nevada";
+
+   aProvinces[519]=new Array(2);
+   aProvinces[519][0]="NH";
+   aProvinces[519][1]="US";
+   aProvinces[519][2]="New Hampshire";
+
+   aProvinces[520]=new Array(2);
+   aProvinces[520][0]="NJ";
+   aProvinces[520][1]="US";
+   aProvinces[520][2]="New Jersey";
+
+   aProvinces[521]=new Array(2);
+   aProvinces[521][0]="NM";
+   aProvinces[521][1]="US";
+   aProvinces[521][2]="New Mexico";
+
+   aProvinces[522]=new Array(2);
+   aProvinces[522][0]="NY";
+   aProvinces[522][1]="US";
+   aProvinces[522][2]="New York";
+
+   aProvinces[523]=new Array(2);
+   aProvinces[523][0]="NC";
+   aProvinces[523][1]="US";
+   aProvinces[523][2]="North Carolina";
+
+   aProvinces[524]=new Array(2);
+   aProvinces[524][0]="ND";
+   aProvinces[524][1]="US";
+   aProvinces[524][2]="North Dakota";
+
+   aProvinces[525]=new Array(2);
+   aProvinces[525][0]="OH";
+   aProvinces[525][1]="US";
+   aProvinces[525][2]="Ohio";
+
+   aProvinces[526]=new Array(2);
+   aProvinces[526][0]="OK";
+   aProvinces[526][1]="US";
+   aProvinces[526][2]="Oklahoma";
+
+   aProvinces[527]=new Array(2);
+   aProvinces[527][0]="OR";
+   aProvinces[527][1]="US";
+   aProvinces[527][2]="Oregon";
+
+   aProvinces[528]=new Array(2);
+   aProvinces[528][0]="OT";
+   aProvinces[528][1]="US";
+   aProvinces[528][2]="Other";
+
+   aProvinces[529]=new Array(2);
+   aProvinces[529][0]="PA";
+   aProvinces[529][1]="US";
+   aProvinces[529][2]="Pennsylvania";
+
+   aProvinces[530]=new Array(2);
+   aProvinces[530][0]="PR";
+   aProvinces[530][1]="US";
+   aProvinces[530][2]="Puerto Rico";
+
+   aProvinces[531]=new Array(2);
+   aProvinces[531][0]="RI";
+   aProvinces[531][1]="US";
+   aProvinces[531][2]="Rhode Island";
+
+   aProvinces[532]=new Array(2);
+   aProvinces[532][0]="SC";
+   aProvinces[532][1]="US";
+   aProvinces[532][2]="South Carolina";
+
+   aProvinces[533]=new Array(2);
+   aProvinces[533][0]="SD";
+   aProvinces[533][1]="US";
+   aProvinces[533][2]="South Dakota";
+
+   aProvinces[534]=new Array(2);
+   aProvinces[534][0]="TN";
+   aProvinces[534][1]="US";
+   aProvinces[534][2]="Tennessee";
+
+   aProvinces[535]=new Array(2);
+   aProvinces[535][0]="TX";
+   aProvinces[535][1]="US";
+   aProvinces[535][2]="Texas";
+
+   aProvinces[536]=new Array(2);
+   aProvinces[536][0]="UT";
+   aProvinces[536][1]="US";
+   aProvinces[536][2]="Utah";
+
+   aProvinces[537]=new Array(2);
+   aProvinces[537][0]="VT";
+   aProvinces[537][1]="US";
+   aProvinces[537][2]="Vermont";
+
+   aProvinces[538]=new Array(2);
+   aProvinces[538][0]="VI";
+   aProvinces[538][1]="US";
+   aProvinces[538][2]="Virgin Islands, U.S.";
+
+   aProvinces[539]=new Array(2);
+   aProvinces[539][0]="VA";
+   aProvinces[539][1]="US";
+   aProvinces[539][2]="Virginia";
+
+   aProvinces[540]=new Array(2);
+   aProvinces[540][0]="WA";
+   aProvinces[540][1]="US";
+   aProvinces[540][2]="Washington";
+
+   aProvinces[541]=new Array(2);
+   aProvinces[541][0]="WV";
+   aProvinces[541][1]="US";
+   aProvinces[541][2]="West Virginia";
+
+   aProvinces[542]=new Array(2);
+   aProvinces[542][0]="WI";
+   aProvinces[542][1]="US";
+   aProvinces[542][2]="Wisconsin";
+
+   aProvinces[543]=new Array(2);
+   aProvinces[543][0]="WY";
+   aProvinces[543][1]="US";
+   aProvinces[543][2]="Wyoming";
+
+
+        // Reload list of provinces for specified country, optionally pre-select province ...
+        function ReloadList(list, selectedValue){
+            if ((list == null) || !list.options || (selectedValue == null) || (selectedValue.length <= 0)) return;
+            selectedValue = "," + selectedValue.replace(" ", "") + ",";
+            for (var x = 0; x < list.options.length; ++x) {
+                if (selectedValue.indexOf(list.options[x].value) > -1 ) {
+                    list.options[x].selected = true;
+                }
+            }
+        }
+        // Reload list of provinces for specified country, optionally pre-select province ...
+      function ReloadProvinceList(f){
+           // if((f.Inp_Province==null) || (aProvinces==null) || (f.Inp_Cand_Country_Filter==null)) return;
+            var pr_CountryID = "";
+			if(f.Inp_Cand_Country_Filter) pr_CountryID = f.Inp_Cand_Country_Filter.value;
+			if(pr_CountryID.length==0) return;
+           //var pr_CountryID = "CA";
+            f.Inp_Province.options.length = 0;
+            var el = new Option; el.value = ""; el.text = "\-\-\-All\-\-\-";
+            f.Inp_Province.options[f.Inp_Province.length] = el;
+            for(var x=0; x<aProvinces.length;x++){
+                if(aProvinces[x][1]==pr_CountryID){
+                    var el = new Option; el.value = aProvinces[x][0]; el.text = aProvinces[x][2];
+                    f.Inp_Province.options[f.Inp_Province.length] = el;
+                }
+            }
+        }
+
+
+        function populateSearchForm(form) {
+            if (!form) { return; }
+            if (form.Inp_XWEB_JobListing_JobID) { form.Inp_XWEB_JobListing_JobID.value = ""; }
+            if (form.Inp_JobType) {form.Inp_JobType.value = ""; }
+            if (form.Inp_Keywords) { form.Inp_Keywords.value = ""; }
+           	if (form.Inp_City) { form.Inp_City.value = ""; }
+           	ReloadList(form.Inp_Cand_Country_Filter, "");
+           	ReloadProvinceList(form);
+           	//ReloadList(form.Inp_Province, "");
+            ReloadList(form.Inp_JobCategory, "");
+
+        }
+
+
+        function Initialize() {
+
+            var form = document.getElementById("filterform");
+            populateSearchForm(form);
+          
+
+        }
+		
+	$(document).ready(function() {	
+		$( "#dialog" ).dialog({
+	      autoOpen: false,
+	      width: 500,
+	      buttons: {
+	        Ok: function() {
+	          $( this ).dialog( "close" );
+	        }
+	      }
+	    });	 
+	    	
+		$( "#opener" ).on( "click", function() {
+	      $( "#dialog" ).dialog( "open" );
+	    });
+	});	
+
+    // -->
+    </script>
+       <!-- Google Analytics Code-->
+    <!-- -->
+</head>
+
+<body id="page-top" class="" onload="if (window.Initialize) { Initialize(); }" style="">
+          <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-tol-light-green" id="mainNav">
+        <div class="container">
+            <div class="navbar-brand text-white"> <a href="https://www.tol.ca/"><img src="clientfiles/TOL/resources/img/tol-logo.png" alt="Township of Langley"></a><span class="divider"></span>Careers</div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.tol.ca/careers/">Careers Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://tol.njoyn.com/cl3/xweb/XWeb.asp?clid=56677&amp;page=joblisting">View Jobs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://tol.njoyn.com/cl3/xweb/XWeb.asp?clid=56677&amp;page=login">Sign in</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- /Navigation-->
+
+    <header id="tol-img-header">
+        <div class="container">
+        </div>
+    </header>
+
+    <div class="container">
+    		 <h1 id="pagetitle" class="py-3 ml-3" style="margin-bottom: 0px; padding-bottom:0px !important;">External Portal</h1>
+        <h1 id="pagetitle" class="py-3 ml-3" style="margin-top: 0px; padding-top:0px !important;">Job Opportunities</h1>
+        <div class="row">
+            <div class="col-lg-8">
+                <!-- Main content -->
+                <section id="main">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12 mx-auto">
+                    <div id="njnContentContainer" class="njnContentContainer">
+                       
+                       
+                        <div class="row">
+                            
+                      
+                            
+                              
+                           
+                      </div>	
+	
+    <div id="njoynPageContainer" class="njoynPageContainer jobListing">
+        <noscript><p>To display this page you need a browser with JavaScript support.</p></noscript> <!-- TRN_35126: To display this page you need a browser with JavaScript support. -->
+        <!-- njoyn content starts-->
+        <form id="filterform" action="xweb.asp?tbtoken=bFpZRRsXCBMFZi4lLkAuJF54NSQgCCE4c2FEcFkpcUhYVCkIExFaKzVvWzVqehQEcQkbURNUTncqWA%3D%3D&amp;chk=ZVpaShw%3D&amp;clid=56677&amp;Page=joblisting" method="post" onsubmit="return SearchJobs(this);">
+            <input type="hidden" value=" EnterDate Desc " name="s">
+            <input type="hidden" name="hiddencategoryid">
+            <input type="hidden" value="1" name="pn">
+         <!--   <input type="hidden" name="Inp_Country" value="CA" /> -->
+            <input type="hidden" name="Inp_ItemsPerPage" value="50">
+<div class="row"><p><strong>Postings listed on this page are open to everyone.</strong></p></div>
+       
+	    <div class="njnPageSection noborder">	
+            <div id="accordionsearch" class="ui-accordion ui-widget ui-helper-reset" role="tablist">
+                <strong class="ui-accordion-header ui-state-default ui-corner-all ui-accordion-icons" role="tab" id="ui-id-21" aria-controls="ui-id-22" aria-selected="false" aria-expanded="false" tabindex="0"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>Search Jobs</strong>
+                <div class="njnSection noborder ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" id="ui-id-22" aria-labelledby="ui-id-21" role="tabpanel" aria-hidden="true" style="display: none;">
+                <!-- Search parameters -->
+             	<div class="row">
+			        <div class="column">
+                       
+                          	<div class="row">
+                      			<div class="leftcolumn">
+                            	    <label class="profileFieldLabel" for="Inp_XWEB_JobListing_JobID">Job Number:</label>
+                            	</div>
+                            	<div class="rightcolumn">
+                            	    <input name="Inp_XWEB_JobListing_JobID" id="Inp_XWEB_JobListing_JobID" class="profileField" type="text" value="">
+                            	</div>
+                          	</div>
+                          	<div class="row">
+                          		<div class="leftcolumn">
+                            	    <label class="profileFieldLabel" for="Inp_Keywords">Keywords:</label>
+                            	</div>
+                            	<div class="rightcolumn">
+                            	    <input name="Inp_Keywords" id="Inp_Keywords" class="profileField" type="text" size="20" value="">
+                            	</div>
+                          	</div>  
+                        </div>
+                        <div class="column">
+                      	
+                           	<div class="row">
+                           		<div class="leftcolumn">
+                             	    <label class="profileFieldLabel" for="Inp_JobCategory">Category:</label>
+                             	</div>
+                            	<div class="rightcolumn">
+                            	    <select name="Inp_JobCategory" id="Inp_JobCategory" class="profileField"><option value="0"> ---All--- </option><option value="2824">Bylaw Enforcement</option><option value="2821">Community and Policy Planning</option><option value="2567">Community Development </option><option value="2568">Corporate Administration </option><option value="2837">Corporate Projects </option><option value="2569">Engineering&nbsp;</option><option value="2820">Event Facilities</option><option value="2817">Facilities</option><option value="2570">Finance</option><option value="2574">Fire</option><option value="2571">Human Resources</option><option value="2822">Information Technology</option><option value="2823">Legislative Services</option><option value="2572">Municipal Administration&nbsp;</option><option value="2825">Permits, Licences and Inspections</option><option value="2819">Public Works</option><option value="2575">RCMP</option><option value="2828">Recreation, Arts and Culture</option></select>
+                            	</div>
+                          	</div>
+                          	<div class="row">
+                           		<div class="leftcolumn">
+                             	    <label class="profileFieldLabel" for="Inp_JobType">Employment Type:</label>
+                             	</div>
+                            	<div class="rightcolumn">
+                            	<select name="inp_JobType" id="Inp_JobType" class="profileField">[
+                            	<option value="0">---All---</option>
+                            	<option value="AUX">Auxiliary</option>
+								<option value="ACT">Acting</option>
+							    <option value="GF">Grant Funded</option>
+                            	<option value="IP">Incentive Program</option>
+                            	<option value="L">Casual</option>
+                            	<option value="PCF">Paid Call Firefighter</option>
+                            	<option value="RFT">Regular Full Time</option>
+                            	<option value="RPT">Regular Part Time</option>
+                            	<option value="TF-T">Temporary Full-time</option>
+                            	</select>
+                            	  
+                            	</div>
+                          	</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="column">
+						    <div class="row">
+						        <p><a href="#" id="opener">View examples</a> of keyword search parameters.</p>
+					        </div>
+				        </div>
+				        <div class="column">
+						    <div class="row">
+						        <p>
+						        <input name="joblistingsearchbutton" id="joblistingsearchbutton" class="NjnButton" type="submit" value="Search">
+						        <input class="NjnButton" id="joblistingresetbutton" type="button" value="Reset" onclick="location.href='xweb.asp?tbtoken=bFpZRRsXCBMFZi4lLkAuJF54NSQgCCE4c2FEcFkpcUhYVCkIExFaKzVvWzVqehQEcQkbURNUTncqWA%3D%3D&amp;chk=ZVpaShw%3D&amp;clid=56677&amp;Page=joblisting'">
+						        </p>
+						    </div>
+				        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </form>     
+		
+	<div class="njnPageSection noborder">
+
+        <div class="njnSection noborder">
+		    <h2>Search Results</h2>
+            <div id="sortingMessage" class="row">
+			    Click on a column heading to re-sort the listings.<br>
+Click a Job Number to view the description and apply online.
+			</div>
+		</div>
+		
+		<style>
+            @media screen and (max-width: 768px) {
+		            td:nth-of-type(1):before { content: "Job Number"; }
+		            td:nth-of-type(2):before { content: "Job Title"; }
+		            td:nth-of-type(3):before { content: "Category"; }
+		            td:nth-of-type(4):before { content: "Employment Type"; }
+		            td:nth-of-type(5):before { content: "City"; }
+		            td:nth-of-type(6):before { content: "Competition Opening Date"; }
+		            td:nth-of-type(7):before { content: "Closing Date"; }
+            }
+		</style>
+		<div class="njnSection noborder">	
+			<div class="NjnSectionTable">
+				<table width="100%" border="0" cellpadding="0" cellspacing="1" id="searchtable">
+                <thead>
+                <tr>
+                   	<th scope="col" class="SubHeader"><a class="JobFilter" href="javascript:sortby('jobid ')">Job Number</a></th>
+                    <th scope="col" class="SubHeader"><a class="JobFilter" href="javascript:sortby('title ')">Job Title</a></th>
+                    <th scope="col" class="SubHeader"><a class="JobFilter" href="javascript:sortby('Hierarchy_Level_203 ')">Department</a></th>                    
+                    <th scope="col" class="SubHeader"><a class="JobFilter" href="javascript:sortby('jobtype ')">Employment Type</a></th>
+                  
+                    <th scope="col" class="SubHeader"><a class="JobFilter" href="javascript:sortby('PostDateTo ')">Closing Date</a></th> 
+                   </tr>
+                </thead>
+                 <tbody>
+                	<tr class=" oddTableDataRow"><td><a title="View job details" href="xweb.asp?tbtoken=bFpZRRsXCBMFZi4lLkAuJF54NSQgCCE4c2FEcFkpcUhYVCkIExFaKzVvWzVqehQEcQkbURNUTncqWA%3D%3D&amp;chk=ZVpaShw%3D&amp;clid=56677&amp;Page=JobDetails&amp;Jobid=J0426-0424&amp;BRID=349515&amp;lang=1">J0426-0424</a></td><td>26-U051 - Labourer - Utilities Operations (up to 4)</td><td>Utilities Operations</td><td>Temporary Full Time</td><td>May 7, 2026</td></tr>
+<tr class=" evenTableDataRow"><td><a title="View job details" href="xweb.asp?tbtoken=bFpZRRsXCBMFZi4lLkAuJF54NSQgCCE4c2FEcFkpcUhYVCkIExFaKzVvWzVqehQEcQkbURNUTncqWA%3D%3D&amp;chk=ZVpaShw%3D&amp;clid=56677&amp;Page=JobDetails&amp;Jobid=J0426-0433&amp;BRID=349572&amp;lang=1">J0426-0433</a></td><td>26-B019 - Clerk Typist III (up to 3)</td><td>Police Services</td><td>Auxiliary</td><td>April 26, 2026</td></tr>
+<tr class=" oddTableDataRow"><td><a title="View job details" href="xweb.asp?tbtoken=bFpZRRsXCBMFZi4lLkAuJF54NSQgCCE4c2FEcFkpcUhYVCkIExFaKzVvWzVqehQEcQkbURNUTncqWA%3D%3D&amp;chk=ZVpaShw%3D&amp;clid=56677&amp;Page=JobDetails&amp;Jobid=J0426-0329&amp;BRID=349350&amp;lang=1">J0426-0329</a></td><td>26-U050 - Utilities Maintenance Worker</td><td>Utilities Operations</td><td>Regular Full Time</td><td>May 7, 2026</td></tr>
+<tr class=" evenTableDataRow"><td><a title="View job details" href="xweb.asp?tbtoken=bFpZRRsXCBMFZi4lLkAuJF54NSQgCCE4c2FEcFkpcUhYVCkIExFaKzVvWzVqehQEcQkbURNUTncqWA%3D%3D&amp;chk=ZVpaShw%3D&amp;clid=56677&amp;Page=JobDetails&amp;Jobid=J0426-0320&amp;BRID=349310&amp;lang=1">J0426-0320</a></td><td>26-U049 - Paralegal</td><td>Property Services</td><td>Regular Full Time</td><td>May 7, 2026</td></tr>
+<tr class=" oddTableDataRow"><td><a title="View job details" href="xweb.asp?tbtoken=bFpZRRsXCBMFZi4lLkAuJF54NSQgCCE4c2FEcFkpcUhYVCkIExFaKzVvWzVqehQEcQkbURNUTncqWA%3D%3D&amp;chk=ZVpaShw%3D&amp;clid=56677&amp;Page=JobDetails&amp;Jobid=J0426-0060&amp;BRID=348725&amp;lang=1">J0426-0060</a></td><td>26-U048 - Electrical Technician (up to 2)</td><td>Utilities Operations</td><td>Temporary Full Time</td><td>April 30, 2026</td></tr>
+<tr class=" evenTableDataRow"><td><a title="View job details" href="xweb.asp?tbtoken=bFpZRRsXCBMFZi4lLkAuJF54NSQgCCE4c2FEcFkpcUhYVCkIExFaKzVvWzVqehQEcQkbURNUTncqWA%3D%3D&amp;chk=ZVpaShw%3D&amp;clid=56677&amp;Page=JobDetails&amp;Jobid=J0326-1130&amp;BRID=348350&amp;lang=1">J0326-1130</a></td><td>26-U047- Trails and Natural Areas Maintenance Worker</td><td>Parks Operations</td><td>Regular Full Time</td><td>April 23, 2026</td></tr>
+<tr class=" oddTableDataRow"><td><a title="View job details" href="xweb.asp?tbtoken=bFpZRRsXCBMFZi4lLkAuJF54NSQgCCE4c2FEcFkpcUhYVCkIExFaKzVvWzVqehQEcQkbURNUTncqWA%3D%3D&amp;chk=ZVpaShw%3D&amp;clid=56677&amp;Page=JobDetails&amp;Jobid=J0126-1011&amp;BRID=343303&amp;lang=1">J0126-1011</a></td><td>26-B010 - Advanced Aquatics and First Aid Instructors (up to 5) - Aux</td><td>Recreation Programs and Services</td><td>Auxiliary</td><td>June 29, 2026</td></tr>
+<tr class=" evenTableDataRow"><td><a title="View job details" href="xweb.asp?tbtoken=bFpZRRsXCBMFZi4lLkAuJF54NSQgCCE4c2FEcFkpcUhYVCkIExFaKzVvWzVqehQEcQkbURNUTncqWA%3D%3D&amp;chk=ZVpaShw%3D&amp;clid=56677&amp;Page=JobDetails&amp;Jobid=J0126-0458&amp;BRID=341889&amp;lang=1">J0126-0458</a></td><td>26-B009 - Arena and Facility Service Worker 1 (up to 10)</td><td>Facilities Operations and Maintenance</td><td>Auxiliary</td><td>November 27, 2026</td></tr>
+<tr class=" oddTableDataRow"><td><a title="View job details" href="xweb.asp?tbtoken=bFpZRRsXCBMFZi4lLkAuJF54NSQgCCE4c2FEcFkpcUhYVCkIExFaKzVvWzVqehQEcQkbURNUTncqWA%3D%3D&amp;chk=ZVpaShw%3D&amp;clid=56677&amp;Page=JobDetails&amp;Jobid=J0126-0455&amp;BRID=341884&amp;lang=1">J0126-0455</a></td><td>26-B008 - Pool Service Worker (up to 10)</td><td>Facilities Operations and Maintenance</td><td>Auxiliary</td><td>November 27, 2026</td></tr>
+<tr class=" evenTableDataRow"><td><a title="View job details" href="xweb.asp?tbtoken=bFpZRRsXCBMFZi4lLkAuJF54NSQgCCE4c2FEcFkpcUhYVCkIExFaKzVvWzVqehQEcQkbURNUTncqWA%3D%3D&amp;chk=ZVpaShw%3D&amp;clid=56677&amp;Page=JobDetails&amp;Jobid=J1225-0824&amp;BRID=340309&amp;lang=1">J1225-0824</a></td><td>26-B002 - Fitness Instructors (up to 20)</td><td>Recreation Programs and Services</td><td>Auxiliary</td><td>June 29, 2026</td></tr>
+            
+                </tbody>
+				</table>
+				
+				<script type="text/javascript" language="JavaScript">
+				    altrows2('searchtable', 'oddTableDataRow', 'evenTableDataRow')
+				</script>
+			</div>	
+		
+			<div id="accordion" class="ui-accordion ui-widget ui-helper-reset" role="tablist">
+                <h2 class="ui-accordion-header ui-state-default ui-corner-all ui-accordion-icons" role="tab" id="ui-id-1" aria-controls="ui-id-2" aria-selected="false" aria-expanded="false" tabindex="0"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>J0426-0424 - 26-U051 - Labourer - Utilities Operations (up to 4)</h2><div class="njnSection noborder ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" id="ui-id-2" aria-labelledby="ui-id-1" role="tabpanel" aria-hidden="true" style="display: none;"><div class="column"><div class="row"><span class="tombstonelabel">Department</span><span class="tombstonevalue">Utilities Operations</span></div><div class="row"><span class="tombstonelabel">Employment Type</span><span class="tombstonevalue">Temporary Full Time</span></div></div><div class="column"><div class="row"><span class="tombstonelabel">Closing Date</span><span class="tombstonevalue">May 7, 2026</span></div></div><div class="row"><a title="View job details" href="xweb.asp?tbtoken=bFpZRRsXCBMFZi4lLkAuJF54NSQgCCE4c2FEcFkpcUhYVCkIExFaKzVvWzVqehQEcQkbURNUTncqWA%3D%3D&amp;chk=ZVpaShw%3D&amp;clid=56677&amp;Page=JobDetails&amp;Jobid=J0426-0424&amp;BRID=349515&amp;lang=1">View Job Details</a></div></div>
+<h2 class="ui-accordion-header ui-state-default ui-corner-all ui-accordion-icons" role="tab" id="ui-id-3" aria-controls="ui-id-4" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>J0426-0433 - 26-B019 - Clerk Typist III (up to 3)</h2><div class="njnSection noborder ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" id="ui-id-4" aria-labelledby="ui-id-3" role="tabpanel" aria-hidden="true" style="display: none;"><div class="column"><div class="row"><span class="tombstonelabel">Department</span><span class="tombstonevalue">Police Services</span></div><div class="row"><span class="tombstonelabel">Employment Type</span><span class="tombstonevalue">Auxiliary</span></div></div><div class="column"><div class="row"><span class="tombstonelabel">Closing Date</span><span class="tombstonevalue">April 26, 2026</span></div></div><div class="row"><a title="View job details" href="xweb.asp?tbtoken=bFpZRRsXCBMFZi4lLkAuJF54NSQgCCE4c2FEcFkpcUhYVCkIExFaKzVvWzVqehQEcQkbURNUTncqWA%3D%3D&amp;chk=ZVpaShw%3D&amp;clid=56677&amp;Page=JobDetails&amp;Jobid=J0426-0433&amp;BRID=349572&amp;lang=1">View Job Details</a></div></div>
+<h2 class="ui-accordion-header ui-state-default ui-corner-all ui-accordion-icons" role="tab" id="ui-id-5" aria-controls="ui-id-6" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>J0426-0329 - 26-U050 - Utilities Maintenance Worker</h2><div class="njnSection noborder ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" id="ui-id-6" aria-labelledby="ui-id-5" role="tabpanel" aria-hidden="true" style="display: none;"><div class="column"><div class="row"><span class="tombstonelabel">Department</span><span class="tombstonevalue">Utilities Operations</span></div><div class="row"><span class="tombstonelabel">Employment Type</span><span class="tombstonevalue">Regular Full Time</span></div></div><div class="column"><div class="row"><span class="tombstonelabel">Closing Date</span><span class="tombstonevalue">May 7, 2026</span></div></div><div class="row"><a title="View job details" href="xweb.asp?tbtoken=bFpZRRsXCBMFZi4lLkAuJF54NSQgCCE4c2FEcFkpcUhYVCkIExFaKzVvWzVqehQEcQkbURNUTncqWA%3D%3D&amp;chk=ZVpaShw%3D&amp;clid=56677&amp;Page=JobDetails&amp;Jobid=J0426-0329&amp;BRID=349350&amp;lang=1">View Job Details</a></div></div>
+<h2 class="ui-accordion-header ui-state-default ui-corner-all ui-accordion-icons" role="tab" id="ui-id-7" aria-controls="ui-id-8" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>J0426-0320 - 26-U049 - Paralegal</h2><div class="njnSection noborder ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" id="ui-id-8" aria-labelledby="ui-id-7" role="tabpanel" aria-hidden="true" style="display: none;"><div class="column"><div class="row"><span class="tombstonelabel">Department</span><span class="tombstonevalue">Property Services</span></div><div class="row"><span class="tombstonelabel">Employment Type</span><span class="tombstonevalue">Regular Full Time</span></div></div><div class="column"><div class="row"><span class="tombstonelabel">Closing Date</span><span class="tombstonevalue">May 7, 2026</span></div></div><div class="row"><a title="View job details" href="xweb.asp?tbtoken=bFpZRRsXCBMFZi4lLkAuJF54NSQgCCE4c2FEcFkpcUhYVCkIExFaKzVvWzVqehQEcQkbURNUTncqWA%3D%3D&amp;chk=ZVpaShw%3D&amp;clid=56677&amp;Page=JobDetails&amp;Jobid=J0426-0320&amp;BRID=349310&amp;lang=1">View Job Details</a></div></div>
+<h2 class="ui-accordion-header ui-state-default ui-corner-all ui-accordion-icons" role="tab" id="ui-id-9" aria-controls="ui-id-10" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>J0426-0060 - 26-U048 - Electrical Technician (up to 2)</h2><div class="njnSection noborder ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" id="ui-id-10" aria-labelledby="ui-id-9" role="tabpanel" aria-hidden="true" style="display: none;"><div class="column"><div class="row"><span class="tombstonelabel">Department</span><span class="tombstonevalue">Utilities Operations</span></div><div class="row"><span class="tombstonelabel">Employment Type</span><span class="tombstonevalue">Temporary Full Time</span></div></div><div class="column"><div class="row"><span class="tombstonelabel">Closing Date</span><span class="tombstonevalue">April 30, 2026</span></div></div><div class="row"><a title="View job details" href="xweb.asp?tbtoken=bFpZRRsXCBMFZi4lLkAuJF54NSQgCCE4c2FEcFkpcUhYVCkIExFaKzVvWzVqehQEcQkbURNUTncqWA%3D%3D&amp;chk=ZVpaShw%3D&amp;clid=56677&amp;Page=JobDetails&amp;Jobid=J0426-0060&amp;BRID=348725&amp;lang=1">View Job Details</a></div></div>
+<h2 class="ui-accordion-header ui-state-default ui-corner-all ui-accordion-icons" role="tab" id="ui-id-11" aria-controls="ui-id-12" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>J0326-1130 - 26-U047- Trails and Natural Areas Maintenance Worker</h2><div class="njnSection noborder ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" id="ui-id-12" aria-labelledby="ui-id-11" role="tabpanel" aria-hidden="true" style="display: none;"><div class="column"><div class="row"><span class="tombstonelabel">Department</span><span class="tombstonevalue">Parks Operations</span></div><div class="row"><span class="tombstonelabel">Employment Type</span><span class="tombstonevalue">Regular Full Time</span></div></div><div class="column"><div class="row"><span class="tombstonelabel">Closing Date</span><span class="tombstonevalue">April 23, 2026</span></div></div><div class="row"><a title="View job details" href="xweb.asp?tbtoken=bFpZRRsXCBMFZi4lLkAuJF54NSQgCCE4c2FEcFkpcUhYVCkIExFaKzVvWzVqehQEcQkbURNUTncqWA%3D%3D&amp;chk=ZVpaShw%3D&amp;clid=56677&amp;Page=JobDetails&amp;Jobid=J0326-1130&amp;BRID=348350&amp;lang=1">View Job Details</a></div></div>
+<h2 class="ui-accordion-header ui-state-default ui-corner-all ui-accordion-icons" role="tab" id="ui-id-13" aria-controls="ui-id-14" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>J0126-1011 - 26-B010 - Advanced Aquatics and First Aid Instructors (up to 5) - Aux</h2><div class="njnSection noborder ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" id="ui-id-14" aria-labelledby="ui-id-13" role="tabpanel" aria-hidden="true" style="display: none;"><div class="column"><div class="row"><span class="tombstonelabel">Department</span><span class="tombstonevalue">Recreation Programs and Services</span></div><div class="row"><span class="tombstonelabel">Employment Type</span><span class="tombstonevalue">Auxiliary</span></div></div><div class="column"><div class="row"><span class="tombstonelabel">Closing Date</span><span class="tombstonevalue">June 29, 2026</span></div></div><div class="row"><a title="View job details" href="xweb.asp?tbtoken=bFpZRRsXCBMFZi4lLkAuJF54NSQgCCE4c2FEcFkpcUhYVCkIExFaKzVvWzVqehQEcQkbURNUTncqWA%3D%3D&amp;chk=ZVpaShw%3D&amp;clid=56677&amp;Page=JobDetails&amp;Jobid=J0126-1011&amp;BRID=343303&amp;lang=1">View Job Details</a></div></div>
+<h2 class="ui-accordion-header ui-state-default ui-corner-all ui-accordion-icons" role="tab" id="ui-id-15" aria-controls="ui-id-16" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>J0126-0458 - 26-B009 - Arena and Facility Service Worker 1 (up to 10)</h2><div class="njnSection noborder ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" id="ui-id-16" aria-labelledby="ui-id-15" role="tabpanel" aria-hidden="true" style="display: none;"><div class="column"><div class="row"><span class="tombstonelabel">Department</span><span class="tombstonevalue">Facilities Operations and Maintenance</span></div><div class="row"><span class="tombstonelabel">Employment Type</span><span class="tombstonevalue">Auxiliary</span></div></div><div class="column"><div class="row"><span class="tombstonelabel">Closing Date</span><span class="tombstonevalue">November 27, 2026</span></div></div><div class="row"><a title="View job details" href="xweb.asp?tbtoken=bFpZRRsXCBMFZi4lLkAuJF54NSQgCCE4c2FEcFkpcUhYVCkIExFaKzVvWzVqehQEcQkbURNUTncqWA%3D%3D&amp;chk=ZVpaShw%3D&amp;clid=56677&amp;Page=JobDetails&amp;Jobid=J0126-0458&amp;BRID=341889&amp;lang=1">View Job Details</a></div></div>
+<h2 class="ui-accordion-header ui-state-default ui-corner-all ui-accordion-icons" role="tab" id="ui-id-17" aria-controls="ui-id-18" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>J0126-0455 - 26-B008 - Pool Service Worker (up to 10)</h2><div class="njnSection noborder ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" id="ui-id-18" aria-labelledby="ui-id-17" role="tabpanel" aria-hidden="true" style="display: none;"><div class="column"><div class="row"><span class="tombstonelabel">Department</span><span class="tombstonevalue">Facilities Operations and Maintenance</span></div><div class="row"><span class="tombstonelabel">Employment Type</span><span class="tombstonevalue">Auxiliary</span></div></div><div class="column"><div class="row"><span class="tombstonelabel">Closing Date</span><span class="tombstonevalue">November 27, 2026</span></div></div><div class="row"><a title="View job details" href="xweb.asp?tbtoken=bFpZRRsXCBMFZi4lLkAuJF54NSQgCCE4c2FEcFkpcUhYVCkIExFaKzVvWzVqehQEcQkbURNUTncqWA%3D%3D&amp;chk=ZVpaShw%3D&amp;clid=56677&amp;Page=JobDetails&amp;Jobid=J0126-0455&amp;BRID=341884&amp;lang=1">View Job Details</a></div></div>
+<h2 class="ui-accordion-header ui-state-default ui-corner-all ui-accordion-icons" role="tab" id="ui-id-19" aria-controls="ui-id-20" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>J1225-0824 - 26-B002 - Fitness Instructors (up to 20)</h2><div class="njnSection noborder ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" id="ui-id-20" aria-labelledby="ui-id-19" role="tabpanel" aria-hidden="true" style="display: none;"><div class="column"><div class="row"><span class="tombstonelabel">Department</span><span class="tombstonevalue">Recreation Programs and Services</span></div><div class="row"><span class="tombstonelabel">Employment Type</span><span class="tombstonevalue">Auxiliary</span></div></div><div class="column"><div class="row"><span class="tombstonelabel">Closing Date</span><span class="tombstonevalue">June 29, 2026</span></div></div><div class="row"><a title="View job details" href="xweb.asp?tbtoken=bFpZRRsXCBMFZi4lLkAuJF54NSQgCCE4c2FEcFkpcUhYVCkIExFaKzVvWzVqehQEcQkbURNUTncqWA%3D%3D&amp;chk=ZVpaShw%3D&amp;clid=56677&amp;Page=JobDetails&amp;Jobid=J1225-0824&amp;BRID=340309&amp;lang=1">View Job Details</a></div></div>
+ 
+            </div>
+            <script type="text/javascript">
+                $("#accordion").accordion({
+                    active: false,
+                    collapsible: true,
+                    heightStyle: 'content'
+                });
+			</script>
+          
+			<div class="row">
+				
+				Page 1 of 1
+			</div>
+        </div>
+			
+	
+    </div>
+</div>
+        
+<!-- end: NJOYN content -->
+<script type="text/javascript">
+    $("#accordionsearch").accordion({
+        active: false,
+        collapsible: true,
+        heightStyle: 'content'
+    });
+</script>
+
+
+</div>
+  </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- /Main content -->
+            </div>
+            <div class="col-lg-4">
+                <div class="child-navigation content-panel panel panel-default">
+                    <div class="panel-heading">
+                        <h4><i class="fa fa-folder-open"></i> Careers</h4>
+                    </div>
+                    <div class="list-group">
+                       <a class="list-group-item current" href="xweb.asp?tbtoken=bFpZRRsXCBMFZi4lLkAuJF54NSQgCCE4c2FEcFkpcUhYVCkIExFaKzVvWzVqehQEcQkbURNUTncqWA%3D%3D&amp;chk=ZVpaShw%3D&amp;clid=56677&amp;page=joblisting">Job Opportunities</a><a class="list-group-item " href="xweb.asp?tbtoken=bFpZRRsXCBMFZi4lLkAuJF54NSQgCCE4c2FEcFkpcUhYVCkIExFaKzVvWzVqehQEcQkbURNUTncqWA%3D%3D&amp;chk=ZVpaShw%3D&amp;clid=56677&amp;page=JobMatchSubscription">Career Alert</a><a class="list-group-item " href="xweb.asp?tbtoken=bFpZRRsXCBMFZi4lLkAuJF54NSQgCCE4c2FEcFkpcUhYVCkIExFaKzVvWzVqehQEcQkbURNUTncqWA%3D%3D&amp;chk=ZVpaShw%3D&amp;clid=56677&amp;page=login">My Profile</a><a class="list-group-item " href="xweb.asp?tbtoken=bFpZRRsXCBMFZi4lLkAuJF54NSQgCCE4c2FEcFkpcUhYVCkIExFaKzVvWzVqehQEcQkbURNUTncqWA%3D%3D&amp;chk=ZVpaShw%3D&amp;clid=56677&amp;page=support">Help</a>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="page-footer table-dark font-small pt-4 mt-4 bg-tol-light-green">
+        <div class="container">
+            <!-- Footer Links -->
+            <div class="container-fluid text-center text-md-left">
+
+                <!-- Grid row -->
+                <div class="row">
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 mt-md-0 mt-3">
+
+                        <!-- Content -->
+                        <a href="https://www.tol.ca/"><img style="margin-bottom: 20px" src="clientfiles/TOL/resources/img/tol-logo.png" alt="Township of Langley"></a>
+                        <p>
+                            Civic Facility<br>
+                            20338 - 65 Avenue<br>
+                            Langley, BC, Canada<br>
+                            V2Y 3J1
+                        </p>
+
+                    </div>
+                    <!-- Grid column -->
+
+                    <hr class="clearfix w-100 d-md-none pb-3">
+
+                    <!-- Grid column -->
+                    <div class="col-md-2 mb-md-0 mb-3">
+
+                        <!-- Links -->
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="https://www.tol.ca/careers/">Careers Home</a>
+                            </li>
+                            <li>
+                                <a href="https://tol.njoyn.com/cl3/xweb/XWeb.asp?clid=56677&amp;page=joblisting">View Jobs</a>
+                            </li>
+                            <li>
+                                <a href="https://tol.njoyn.com/cl3/xweb/XWeb.asp?clid=56677&amp;page=login">Sign in</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <!-- Grid column -->
+                    <!-- Grid column -->
+                    <div class="col-md-5 mb-md-0 mb-3">
+
+                        <!-- Links -->
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="https://www.tol.ca/careers/">Working at the Township</a>
+                            </li>
+                            <li>
+                                <a href="https://www.tol.ca/careers/fire-department/">Fire Department</a>
+                            </li>
+                            <li>
+                                <a href="https://www.tol.ca/careers/recreation-jobs/">Recreation Jobs</a>
+                            </li>
+                       
+                        </ul>
+
+                    </div>
+                    <!-- Grid column -->
+                    <!-- Grid column -->
+                    <div class="col-md-2 mb-md-0 mb-3">
+<span style="font-size:20px; padding-left:5px;"><a href="https://www.tol.ca/en/connect/stay-connected.aspx">Connect with us</a></span><br><br>
+                        <!-- Links -->
+                        <ul class="list-unstyled list-social" id="socialicons" style="display: inline-flex;">
+                            <li>
+                                <a href="https://www.facebook.com/LangleyTownship/"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
+                            </li>
+                               <li>
+                                <a href="https://www.instagram.com/langleytownship"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/langleytownship"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://www.youtube.com/user/langleytownship"><i class="fa fa-youtube-square fa-2x" aria-hidden="true"></i></a>
+                            </li>
+                         
+                            <li>
+                                <a href="https://www.linkedin.com/company/township-of-langley/"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <!-- Grid column -->
+
+                </div>
+                <!-- Grid row -->
+
+            </div>
+            <!-- Footer Links -->
+        </div>
+    </footer>
+    <!-- /Footer -->
+    <!-- Copyright -->
+    <div class="footer-copyright py-3 table-dark bg-tol-dark-green">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    © <script>document.write(new Date().getFullYear())</script>2026 Copyright
+                    <a href="https://www.tol.ca">Township of Langley</a> |
+                    <a href="https://www.tol.ca/privacy">Privacy &amp; Freedom of Information</a> |
+                    <a href="https://www.tol.ca/terms">Terms of Use</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Copyright -->
+    <!-- Bootstrap core JavaScript -->
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+<!-- tips for keyword search-->
+ 
+
+
+             <div class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-front ui-dialog-buttons ui-draggable ui-resizable" tabindex="-1" role="dialog" aria-describedby="dialog" aria-labelledby="ui-id-23" style="display: none; position: absolute;"><div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix ui-draggable-handle"><span id="ui-id-23" class="ui-dialog-title">Tips for Keyword Search</span><button type="button" class="ui-dialog-titlebar-close"></button></div><div id="dialog" class="ui-dialog-content ui-widget-content">
+This option allows you to use Boolean logic when searching for keywords within job descriptions.
+You can use AND and OR tokens as well as round brackets in your search criteria. 
+The following are valid Boolean search examples:<br>
+<ol>
+	<li>visual basic AND (oracle OR SQL server)
+	</li><li>(Java script OR vbscript) AND (exchange server OR outlook)
+	</li><li>activex data objects AND (xml OR html OR java script)
+	</li><li>(cics AND corba AND enterprise java beans) OR oracle certified developer
+</li></ol>
+Note that key word searches are case insensitive and that punctuation characters are ignored.
+</div><div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix"><div class="ui-dialog-buttonset"><button type="button">Ok</button></div></div><div class="ui-resizable-handle ui-resizable-n" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-e" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-s" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-w" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-sw" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-ne" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-nw" style="z-index: 90;"></div></div></body></html>
