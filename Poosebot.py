@@ -21,6 +21,7 @@ intents = discord.Intents.default()
 intents.message_content = True
 
 langleyTownshipLink = "https://tol.njoyn.com/CL3/xweb/Xweb.asp?tbtoken=bFhRRxMXCG91FHV5RFJTCCNKcRFEcCVbe0hZJysPE2NcWzJpWzEfchd9BQkbURNUTncqWA%3D%3D&chk=ZVpaShw%3D&CLID=56677&page=joblisting"
+abbotsfordCityLink = "https://abbotsford.njoyn.com/CL3/xweb/Xweb.asp?tbtoken=bVtaRRwXCBhxFAEDR11RCFFKdmVEcFFcdkggVCwOExBZW0AZX0sac2R8cwkbURBQS3cqWA%3D%3D&chk=ZVpaShw%3D&CLID=55227&page=joblisting"
 
 criteria = ["IT", "Technical Support", "Information Technology", "Systems Analyst"]
 
@@ -45,6 +46,8 @@ async def runLoop(channel):
         postings.clear()
         scanLangleyCity()
         scanChilliwackCity()
+        scanLangleyTownship()
+        scanCityOfAbbotsford()
         diff = "\n".join(context_diff([str(p) for p in postingPrevious], [str(p) for p in postings]))
         print("Postings:")
         print("\n".join(map(str, postings)))
@@ -70,24 +73,8 @@ async def on_ready():
         client.loop.create_task(runLoop(channel))
     else:
         print("Channel not found. Please check the CHANNEL_ID.")
-''' Old function Not currently needed
-def getScreenshotOfClass(url, id, outputfile):
-    options = webdriver.ChromeOptions()
-    options.add_argument('--headless')
-    driver = webdriver.Chrome(options=options)
-    try:
-        driver.get(url)
-        element = WebDriverWait(driver, 10).until(
-            EC.presence_of_element_located((By.CLASS_NAME, id))
-        )
-        element.screenshot(outputfile)
-        print("Screenshot Taken")
-    except Exception as e:
-        print(f"Error taking screenshot: {e}")
-    finally:
-        driver.quit()
-'''
 def scanLangleyCity():
+    print("\nScanning Langley City \n")
     response = requests.get("https://www.langleycity.ca/careers")
     html = response.text
     
@@ -95,9 +82,7 @@ def scanLangleyCity():
     for row in soup.find_all("tr"):
         cells = [td.get_text() for td in row.find_all("td")]
         if any(term in cell for cell in cells for term in criteria):
-        #if any("IT" in cell for cell in cells):
             postings.append(cells)
-            #print(postings)
     for row in soup.select(".view-job-postings .views-row"):
         title = row.select_one(".views-field-title").get_text(strip=True)
         if "IT" in title:
@@ -109,18 +94,19 @@ def scanLangleyCity():
 
 
 def scanChilliwackCity():
+    print("\nScanning Chilliwack City \n")
     response = requests.get("https://jobs.chilliwack.com/postings/")
     html = response.text
 
     soup = BeautifulSoup(html, "html.parser")
     for row in soup.find_all("tr"):
         cells = [td.get_text() for td in row.find_all("td")]
-        #if any("IT" in cell for cell in cells):
         if any(term in cell for cell in cells for term in criteria):
             postings.append(cells)
             print(cells)
 
 def scanLangleyTownship():
+    print("\nScanning Langley Township \n")
     driver = webdriver.Chrome(service=service, options=options)
     driver.get(langleyTownshipLink)
 
@@ -134,7 +120,25 @@ def scanLangleyTownship():
     for row in soup.find_all("tr"):
         cells = [td.get_text() for td in row.find_all("td")]
         if any(term in cell for cell in cells for term in criteria):
-       # if any("IT" in cell for cell in cells):
+            postings.append(cells)
+            print(cells)
+
+
+def scanCityOfAbbotsford():
+    print("\nScanning City of Abbotsford\n")
+    driver = webdriver.Chrome(service=service, options=options)
+    driver.get(abbotsfordCityLink)
+
+    WebDriverWait(driver, 30).until(
+        EC.presence_of_element_located((By.CLASS_NAME, "NjnSectionTable"))
+    )
+
+    html = driver.page_source
+    driver.quit()
+    soup = BeautifulSoup(html, "html.parser")
+    for row in soup.find_all("tr"):
+        cells = [td.get_text() for td in row.find_all("td")]
+        if any(term in cell for cell in cells for term in criteria):
             postings.append(cells)
             print(cells)
 
@@ -155,6 +159,11 @@ async def on_message(message):
         scanLangleyCity()
         postings.append("=== Chilliwack City ===")
         scanChilliwackCity()
+        postings.append("=== Township of Langley ===")
+        scanLangleyTownship()
+        postings.append("=== City of Abbotsford ===")
+        scanCityOfAbbotsford()
+
 
         diff = "\n".join(context_diff([str(p) for p in postingPrevious], [str(p) for p in postings]))
         print(diff)
@@ -169,7 +178,7 @@ async def on_message(message):
     if message.content.lower().startswith('!test'):
         print("Test Started")
         Sentmessage = 'Test Complete'.format(message)
-        scanLangleyTownship()
+        print('No functions currently being tested')
         print(Sentmessage)
 
 client.run(TOKEN)
