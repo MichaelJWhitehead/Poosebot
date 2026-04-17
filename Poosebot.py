@@ -173,6 +173,8 @@ async def on_message(message):
             Sentmessage = "No postings found"
         postings.remove("=== Chilliwack City ===")
         postings.remove("=== Langley City ===")
+        postings.remove("=== Township of Langley ===")
+        postings.remove("=== City of Abbotsford ===")
         embed = discord.Embed(description=Sentmessage, color=discord.Color.green())
         await message.channel.send(embed=embed)
     if message.content.lower().startswith('!test'):
