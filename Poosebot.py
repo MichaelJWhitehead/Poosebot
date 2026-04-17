@@ -29,7 +29,7 @@ options.add_argument("--headless")
 options.add_argument("--no-sandbox")
 options.add_argument("--disable-dev-shm-usage")
 options.binary_location = "/usr/bin/chromium-browser"
-
+options.add_argument("--user-agent=Mozilla/5.0 (X11; Linux aarch64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36")
 service = Service("/usr/bin/chromedriver")
 
 
@@ -124,7 +124,7 @@ def scanLangleyTownship():
     driver = webdriver.Chrome(service=service, options=options)
     driver.get(langleyTownshipLink)
 
-    WebDriverWait(driver, 10).until(
+    WebDriverWait(driver, 30).until(
         EC.presence_of_element_located((By.CLASS_NAME, "NjnSectionTable"))
     )
 
@@ -167,6 +167,7 @@ async def on_message(message):
         embed = discord.Embed(description=Sentmessage, color=discord.Color.green())
         await message.channel.send(embed=embed)
     if message.content.lower().startswith('!test'):
+        print("Test Started")
         Sentmessage = 'Test Complete'.format(message)
         scanLangleyTownship()
         print(Sentmessage)
